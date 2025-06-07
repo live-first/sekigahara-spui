@@ -1,12 +1,18 @@
 import { cn } from '../utils'
+import './button.css'
 
-export type ButtonProps = {
+type ButtonProps = {
   label: string
   size?: 'sm' | 'md' | 'lg' | 'xl'
+  disabled?: boolean
   className?: string
 }
 
 export const Button = (props: ButtonProps) => {
-  const { label, size = 'md', className } = props
-  return <button className={cn('', className)}>{label}</button>
+  const { label, size = 'md', disabled = false, className } = props
+  return (
+    <button className={cn('', className)} disabled={disabled}>
+      {label}
+    </button>
+  )
 }
