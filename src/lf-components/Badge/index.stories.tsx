@@ -14,9 +14,9 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const New: Story = {
+export const Info: Story = {
   args: {
-    theme: 'new',
+    theme: 'info',
     label: 'new',
   },
 }

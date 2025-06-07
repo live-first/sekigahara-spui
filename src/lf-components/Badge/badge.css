@@ -1,26 +1,12 @@
-.badge-new {
-  @apply bg-[#ffb217];
-  background-color: aqua;
+.badge-attention {
+  background-color: #ffb217;
 }
 .badge-error {
-  @apply bg-[#ff0000];
+  background-color: #ff0000;
 }
-.badge-attention {
-  @apply bg-[#ff0550];
+.badge-info {
+  background-color: #058fff;
 }
 .badge-warning {
-  @apply bg-[#f6ff00];
-}
-
-.badge-sm {
-  @apply text-sm p-1 rounded-full text-white;
-}
-.badge-md {
-  @apply text-sm p-1 rounded-full text-white;
-}
-.badge-lg {
-  @apply text-sm p-1 rounded-full text-white;
-}
-.badge-xl {
-  @apply text-sm p-1 rounded-full text-white;
+  background-color: #f6ff00;
 }
