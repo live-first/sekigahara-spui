@@ -1,4 +1,6 @@
 import type { StorybookConfig } from '@storybook/nextjs-vite'
+import autoprefixer from 'autoprefixer'
+import postcssTailwind from '@tailwindcss/postcss'
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
@@ -14,5 +16,13 @@ const config: StorybookConfig = {
     options: {},
   },
   staticDirs: ['../public'],
+  viteFinal: async (config) => {
+    config.css = {
+      postcss: {
+        plugins: [autoprefixer(), postcssTailwind()],
+      },
+    }
+    return config
+  },
 }
 export default config

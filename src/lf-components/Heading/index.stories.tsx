@@ -1,15 +1,23 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite'
 
-import { Heading  } from './index'
+import { Heading, HeadingProps } from './index'
+
+const Temp = (props: HeadingProps) => {
+  return (
+    <div className='w-[500px]'>
+      <Heading {...props} />
+    </div>
+  )
+}
 
 const meta = {
   title: 'Components/Heading',
-  component: Heading,
+  component: Temp,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof Heading>
+} satisfies Meta<typeof Temp>
 
 export default meta
 type Story = StoryObj<typeof meta>

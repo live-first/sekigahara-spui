@@ -1,0 +1,36 @@
+.button {
+  cursor: pointer;
+}
+
+.button-sm {
+  font-size: 15px;
+}
+.button-md {
+  font-size: 20px;
+}
+.button-lg {
+  font-size: 25px;
+}
+
+.button-Primary {
+  background-color: #3048ff;
+}
+.button-Primary:hover {
+  background-color: #697bff;
+}
+.button-Secondary {
+  background-color: #16c9ff;
+}
+.button-Secondary:hover {
+  background-color: #62daff;
+}
+.button-Tertiary {
+  background-color: #8a8a8a;
+}
+.button-Tertiary:hover {
+  background-color: #b9b9b9;
+}
+.button:disabled {
+  cursor: not-allowed !important;
+  background-color: #b9b9b9 !important;
+}

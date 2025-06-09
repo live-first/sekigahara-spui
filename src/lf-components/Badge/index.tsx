@@ -10,5 +10,5 @@ type BadgeProps = {
 export const Badge = (props: BadgeProps) => {
   const { theme, label, size = 'md' } = props
 
-  return <span className={cn(`bg-${theme} text-${size} py-1 px-3 rounded-full text-white`)}>{label}</span>
+  return <span className={cn(`badge-${theme} badge-${size} py-1 px-3 rounded-full`)}>{label}</span>
 }
