@@ -7,16 +7,19 @@
 }
 
 .header-left {
-  width: 20%;
+  width: 60px;
+  padding: 8px;
 }
 .header-center {
-  width: 60%;
+  width: 100%;
   align-items: center;
   vertical-align: middle;
   display: flex;
   color: blue;
   font-weight: 600;
+  justify-content: center;
 }
 .header-right {
-  width: 20%;
+  width: 60px;
+  padding: 8px;
 }

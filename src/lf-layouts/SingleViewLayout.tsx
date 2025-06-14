@@ -17,7 +17,7 @@ export const SingleViewLayout = (props: LayoutProps) => {
       <main className='flex flex-col'>
         {main}
       </main>
-      <footer className=''>{footer}</footer>
+      <footer className='fixed bottom-0 w-full'>{footer}</footer>
     </div>
   )
 }

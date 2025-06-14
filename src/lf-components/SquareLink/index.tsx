@@ -1,0 +1,21 @@
+import Link from 'next/link'
+import { cn } from '../utils'
+import { ReactNode } from 'react'
+import './squareLink.css'
+
+export type SquareLinkProps = {
+  href: string
+  size?: 'sm' | 'md' | 'lg'
+  icon: ReactNode
+  label: string
+}
+
+export const SquareLink = (props: SquareLinkProps) => {
+  const { href, size = 'md', icon, label } = props
+  return (
+    <Link href={href} className={cn(`square-link-${size}`, 'flex flex-col p-2 items-center')}>
+      <div className='h-2/3 w-full'>{icon}</div>
+      <div className={cn(`square-link-label-${size}`)}>{label}</div>
+    </Link>
+  )
+}

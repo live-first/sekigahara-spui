@@ -1,26 +1,46 @@
-.heading {
-  
+.h1 {
 }
-
-h1 {
+.h1-label {
   font-size: 3rem;
 }
 
-h2 {
-  font-size: 3rem;
+.h2 {
 }
-h3 {
-  font-size: 3rem;
-}
-
-h4 {
+.h2-label {
   font-size: 3rem;
 }
 
-h5 {
-  font-size: 3rem;
+.h3 {
+  border-radius: 10px;
+  background-color: #3048ff;
+  padding: 0 10px;
+}
+.h3-label {
+  font-size: 2rem;
+  color: #ffffff;
 }
 
-h6 {
-  font-size: 3rem;
+.h4 {
+  border-left: 5px #3048ff solid;
+  padding: 0 10px;
+}
+.h4-label {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.h5 {
+  border-bottom: 2px #3048ff solid;
+  padding: 0 10px;
+}
+.h5-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.h6 {
+}
+.h6-label {
+  font-size: 1.2rem;
+  font-weight: 400;
 }

@@ -16,7 +16,7 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    label: 'リンク',
+    label: 'すべて見る',
     src: '#'
   },
 }
