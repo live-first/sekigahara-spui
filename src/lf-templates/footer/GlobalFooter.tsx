@@ -9,10 +9,10 @@ import { ReactNode } from 'react'
 export const GlobalFooter = () => {
   return (
     <Footer
-      home={<FooterCell href='/' icon={<FaHouse className='h-full w-full' />} title='HOME' />}
-      lineup={<FooterCell href='/' icon={<GiMicrophone className='h-full w-full' />} title='LINEUP' />}
-      timetable={<FooterCell href='/' icon={<FaClock className='h-full w-full' />} title='TIME TABLE' />}
-      other={<FooterCell href='/' icon={<FaMap className='h-full w-full' />} title='MAP' />}
+      home={<FooterCell href='/' icon={<FaHouse className='h-full w-full' />} title='ホーム' />}
+      lineup={<FooterCell href='/lineup' icon={<GiMicrophone className='h-full w-full' />} title='ラインナップ' />}
+      timetable={<FooterCell href='/timetable' icon={<FaClock className='h-full w-full' />} title='タイムテーブル' />}
+      other={<FooterCell href='/' icon={<FaMap className='h-full w-full' />} title='マップ' />}
     />
   )
 }
@@ -27,7 +27,7 @@ const FooterCell = (props: FooterProps) => {
   return (
     <Link href={href} className='flex flex-col w-full h-full p-2 justify-between items-center'>
       <div className='h-2/3 w-full'>{icon}</div>
-      <div className='text-xs'>{title}</div>
+      <div className='text-xs whitespace-nowrap'>{title}</div>
     </Link>
   )
 }
