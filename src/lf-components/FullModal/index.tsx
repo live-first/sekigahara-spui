@@ -4,6 +4,7 @@ import { PropsWithChildren, ReactNode, useState } from 'react'
 import { cn } from '../utils'
 import { SingleViewLayout } from '@/lf-layouts/SingleViewLayout'
 import { Header } from '../Header'
+import './fullModal.css'
 
 export type ModalProps = {
   button: ReactNode
@@ -33,7 +34,7 @@ export const FullModal = (props: PropsWithChildren<ModalProps>) => {
       <button className='flex flex-col w-full h-full justify-center' onClick={() => setOpen(true)}>
         {button}
       </button>
-      <div className={cn(open ? 'w-full h-full fixed top-0 left-0 z-30' : 'hidden')}>
+      <div className={cn(open ? 'fixed top-0 left-0 z-20 modal-body' : 'slide-out')}>
         <SingleViewLayout header={<Header left={<BackBtn />} center={title} />} main={<Main />} />
       </div>
     </div>

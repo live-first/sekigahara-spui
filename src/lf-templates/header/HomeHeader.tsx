@@ -1,9 +1,9 @@
 import { Header } from '@/lf-components/Header'
 import { Image } from '@/lf-components/Image'
-import { IoSettingsSharp } from 'react-icons/io5'
 import { BsBellFill } from 'react-icons/bs'
 import { FullModal } from '@/lf-components/FullModal'
 import { FaChevronLeft } from 'react-icons/fa6'
+import { Setting } from '@/lf-views/home/setting/inde'
 
 export const HomeHeader = () => {
   return (
@@ -28,19 +28,7 @@ const Notification = () => {
       title='通知'
       backBtn={<FaChevronLeft className='w-full h-full' />}
     >
-      <div className='h-full w-full bg-amber-300'></div>
-    </FullModal>
-  )
-}
-
-const Setting = () => {
-  return (
-    <FullModal
-      button={<IoSettingsSharp className='w-full h-full' />}
-      title='設定'
-      backBtn={<FaChevronLeft className='w-full h-full' />}
-    >
-      <div className='h-full w-full bg-amber-300'></div>
+      <div className='w-full h-full'></div>
     </FullModal>
   )
 }

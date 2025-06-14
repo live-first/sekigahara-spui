@@ -1,20 +1,25 @@
 import { PropsWithChildren } from 'react'
 import { cn } from '../utils'
+import './listbox.css'
 
-const Row = ({ children }: PropsWithChildren) => {
-  return <div className='listbox-row'>{children}</div>
+const Row = ({ size, className, children }: PropsWithChildren<ListBoxCommon>) => {
+  const padding = size === 'lg' ? 'py-5' : size === 'md' ? 'py-4' : 'py-2'
+  return <div className={cn('flex listbox-row', padding, className)}>{children}</div>
 }
 
-const Col = ({ children }: PropsWithChildren) => {
-  return <div className='listbox-col'>{children}</div>
+const Col = ({ className, children }: PropsWithChildren<ListBoxCommon>) => {
+  return <div className={cn('flex flex-col listbox-col', className)}>{children}</div>
 }
 
-type ListBoxProps = {
+type ListBoxCommon = {
   variant?: 'row' | 'col'
-  Row?: typeof Row
-  Col?: typeof Col
+  size?: 'sm' | 'md' | 'lg'
   className?: string
 }
+type ListBoxProps = {
+  Row?: typeof Row
+  Col?: typeof Col
+} & ListBoxCommon
 
 const ListBox = (props: PropsWithChildren<ListBoxProps>) => {
   const { variant = 'row', className, children } = props

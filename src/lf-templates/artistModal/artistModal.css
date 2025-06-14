@@ -1,0 +1,26 @@
+.artist-modal {
+  text-align: center;
+  overflow: auto;
+}
+.img-area {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+.artist-name {
+  color: #e14040;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 10px 0;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.concept {
+  text-align: start;
+  font-size: 20px;
+  font-weight: 500;
+}

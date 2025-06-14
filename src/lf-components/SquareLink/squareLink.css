@@ -3,7 +3,7 @@
   height: 60px;
   border-radius: 10px;
   background-color: #ffffff;
-  border: 2px solid #3048ff;
+  border: 2px solid var(--color-default);
   box-shadow: 0 0 5px 1px #0f0f0f63;
 }
 .square-link-label-sm {
@@ -17,13 +17,13 @@
   height: 80px;
   border-radius: 10px;
   background-color: #ffffff;
-  border: 2px solid #3048ff;
-  color: #3048ff;
+  border: 2px solid var(--color-default);
+  color: var(--color-default);
   box-shadow: 0 0 5px 1px #0f0f0f63;
 }
 .square-link-label-md {
   font-size: 12px;
-  color: #3048ff;
+  color: var(--color-default);
   line-height: 1.2;
 }
 
@@ -32,11 +32,11 @@
   height: 100px;
   border-radius: 10px;
   background-color: #ffffff;
-  border: 2px solid #3048ff;
+  border: 2px solid var(--color-default);
   box-shadow: 0 0 5px 1px #0f0f0f63;
 }
 .square-link-label-lg {
   font-size: 12px;
-  color: #3048ff;
+  color: var(--color-default);
   line-height: 1.2;
 }

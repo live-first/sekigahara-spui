@@ -21,7 +21,7 @@ export const Modal = (props: PropsWithChildren<ModalProps>) => {
       </button>
       <div
         className={cn(
-          open ? 'w-full h-full overlay fixed top-0 left-0 z-[200]' : 'hidden',
+          open ? 'overlay fixed top-0 left-0 z-[200]' : 'hidden',
           'relative',
         )}
       >
