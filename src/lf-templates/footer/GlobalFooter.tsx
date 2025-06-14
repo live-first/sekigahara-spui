@@ -10,8 +10,20 @@ export const GlobalFooter = () => {
   return (
     <Footer
       home={<FooterCell href='/' icon={<FaHouse className='h-full w-full' />} title='ホーム' />}
-      lineup={<FooterCell href='/lineup' icon={<GiMicrophone className='h-full w-full' />} title='ラインナップ' />}
-      timetable={<FooterCell href='/timetable' icon={<FaClock className='h-full w-full' />} title='タイムテーブル' />}
+      lineup={
+        <FooterCell
+          href='/lineup'
+          icon={<GiMicrophone className='h-full w-full' />}
+          title='ラインナップ'
+        />
+      }
+      timetable={
+        <FooterCell
+          href='/timetable'
+          icon={<FaClock className='h-full w-full' />}
+          title='タイムテーブル'
+        />
+      }
       other={<FooterCell href='/' icon={<FaMap className='h-full w-full' />} title='マップ' />}
     />
   )

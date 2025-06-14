@@ -35,7 +35,7 @@ export const LineupView = () => {
   }, [])
 
   return (
-    <div className='flex flex-col px-4 mt-8 gap-6'>
+    <div className='flex flex-col px-4 pb-12 mt-8 gap-6'>
       <Grid container spacing={2}>
         {units ? (
           units.map((unit, index) => {

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite'
 
 import { Heading, HeadingProps } from './index'
-import { Link } from '../Link'
+import { LinkLabel } from '../LinkLabel'
 
 const Temp = (props: HeadingProps) => {
   return (
@@ -55,7 +55,7 @@ export const H5: Story = {
   args: {
     tag: 5,
     label: 'H5タグ',
-    right: <Link src='/' label='すべて見る' />,
+    right: <LinkLabel src='/' label='すべて見る' />,
   },
 }
 
