@@ -25,7 +25,7 @@ type FooterProps = {
 const FooterCell = (props: FooterProps) => {
   const { href, icon, title } = props
   return (
-    <Link href={href} className='flex flex-col w-full h-full p-2 justify-between items-center'>
+    <Link href={href} className='flex flex-col w-full h-full pt-2 pb-6 justify-between items-center'>
       <div className='h-2/3 w-full'>{icon}</div>
       <div className='text-xs whitespace-nowrap'>{title}</div>
     </Link>
