@@ -9,6 +9,7 @@
 .square-link-label-sm {
   font-size: 12px;
   color: #3048ff;
+  line-height: 1.2;
 }
 
 .square-link-md {
@@ -23,6 +24,7 @@
 .square-link-label-md {
   font-size: 12px;
   color: #3048ff;
+  line-height: 1.2;
 }
 
 .square-link-lg {
@@ -36,4 +38,5 @@
 .square-link-label-lg {
   font-size: 12px;
   color: #3048ff;
+  line-height: 1.2;
 }

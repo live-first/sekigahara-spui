@@ -1,4 +1,4 @@
-import { PropsWithChildren, ReactNode } from 'react'
+import { PropsWithChildren } from 'react'
 import { cn } from '../utils'
 
 const Row = ({ children }: PropsWithChildren) => {
@@ -13,11 +13,12 @@ type ListBoxProps = {
   variant?: 'row' | 'col'
   Row?: typeof Row
   Col?: typeof Col
+  className?: string
 }
 
 const ListBox = (props: PropsWithChildren<ListBoxProps>) => {
-  const { variant = 'row', children } = props
-  return <div className={cn('flex', variant === 'row' && 'flex-col')}>{children}</div>
+  const { variant = 'row', className, children } = props
+  return <div className={cn('flex', variant === 'row' && 'flex-col', className)}>{children}</div>
 }
 
 ListBox.Row = Row

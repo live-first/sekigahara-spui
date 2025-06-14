@@ -4,10 +4,11 @@ import './panel.css'
 
 type PanelProps = {
   size?: 'sm' | 'md' | 'lg' | 'xl'
+  className?: string
 }
 
 export const Panel = (props: PropsWithChildren<PanelProps>) => {
-  const { size = 'md', children } = props
+  const { size = 'md', className, children } = props
 
-  return <div className={cn('flex flex-col panel', `panel-${size}`)}>{children}</div>
+  return <div className={cn('flex flex-col panel', `panel-${size}`, className)}>{children}</div>
 }
