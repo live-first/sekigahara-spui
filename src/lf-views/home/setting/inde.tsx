@@ -8,8 +8,11 @@ import { IoSettingsSharp } from 'react-icons/io5'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6'
 import { Select } from '@/lf-components/Select'
 import Link from 'next/link'
+import { ToggleSwitch } from '@/lf-components/ToggleSwitch'
+import { useState } from 'react'
 
 export const Setting = () => {
+  const [checked, setChecked] = useState<boolean>(false)
   return (
     <FullModal
       button={<IoSettingsSharp className='w-full h-full' />}
@@ -23,7 +26,15 @@ export const Setting = () => {
             <ListBox>
               <ListBox.Row className='justify-between'>
                 <ListBox.Col>プッシュ通知</ListBox.Col>
-                <ListBox.Col>ON / OFF</ListBox.Col>
+                <ListBox.Col>
+                  <ToggleSwitch
+                    id='push'
+                    checked={checked}
+                    onChange={(checked) => {
+                      setChecked(checked)
+                    }}
+                  />
+                </ListBox.Col>
               </ListBox.Row>
             </ListBox>
           </Panel>

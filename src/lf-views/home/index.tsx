@@ -52,7 +52,7 @@ export const HomeView = () => {
           </div>
         </Panel>
         <div className='flex flex-col gap-2 mt-6'>
-          <Heading tag={4} label='お知らせ' right={<LinkLabel src='/' label='すべて見る' />} />
+          <Heading tag={4} label='お知らせ' right={<LinkLabel src='https://sekigahara-idolwars.net/news' label='すべて見る' />} />
           <Panel>
             <ListBox>
               <ListBox.Row>イベント情報</ListBox.Row>
