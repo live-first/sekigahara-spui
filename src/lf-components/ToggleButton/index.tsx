@@ -1,3 +1,5 @@
+'use client'
+
 import { cn } from '../utils'
 import { ReactNode, useState, PropsWithChildren } from 'react'
 import './toggleButton.css'
