@@ -7,7 +7,7 @@ import { cn } from '../utils'
 type Props = {
   pages: (() => React.JSX.Element)[]
   current?: number
-  onChangePage?: (current: string) => void
+  onChangePage?: (current: number) => void
   className?: string
 } & Partial<Options>
 
@@ -30,8 +30,8 @@ export const PagerSwiper: React.FC<Props> = (props) => {
   })
   useEffect(() => {
     if (props.onChangePage === undefined) return
-    props.onChangePage(current.toString())
-  }, [current])
+    props.onChangePage(current)
+  }, [current, props])
   return (
     <div
       ref={ref}
@@ -46,14 +46,16 @@ export const PagerSwiper: React.FC<Props> = (props) => {
           {useMemo(() => {
             if (isFirstPage) return <div />
             return props.pages[current - 1]()
-          }, [current])}
+          }, [current, isFirstPage, props.pages])}
         </div>
-        <div className='page current'>{useMemo(() => props.pages[current](), [current])}</div>
+        <div className='page current'>
+          {useMemo(() => props.pages[current](), [current, props.pages])}
+        </div>
         <div className='page next'>
           {useMemo(() => {
             if (isLastPage) return <div />
             return props.pages[current + 1]()
-          }, [current])}
+          }, [current, isLastPage, props.pages])}
         </div>
       </div>
     </div>

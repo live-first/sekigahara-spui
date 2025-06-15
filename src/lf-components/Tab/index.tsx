@@ -22,13 +22,13 @@ export type TabProps = {
   Content?: typeof Content
   headers: ReactNode[]
   contents: ReactNode[]
-  current?: string
+  current?: number
   onChange?: () => void
 }
 
 const Tab = (props: TabProps) => {
   const { headers, contents, current } = props
-  const [tab, setTab] = useState<string>(current ?? '0')
+  const [tab, setTab] = useState<number>(current ?? 0)
 
   const page = ({ index, content }: { index: number; content: ReactNode }) => {
     return <div key={index}>{content}</div>
@@ -36,18 +36,14 @@ const Tab = (props: TabProps) => {
 
   return (
     <div className='flex flex-col w-full'>
-      <div className='flex w-full tab-header'>
+      <div className='flex w-full tab-header fixed'>
         {headers?.map((header, index) => {
           return (
             <button
-              className={cn(
-                'py-2 bg-gray-100',
-                `${index}` === tab && 'active',
-                `wd-${headers.length}`,
-              )}
+              className={cn('py-2 bg-gray-100', index === tab && 'active', `wd-${headers.length}`)}
               id={`${index}`}
               onClick={(e) => {
-                setTab(e.currentTarget.id)
+                setTab(Number(e.currentTarget.id))
               }}
               key={index}
             >
@@ -62,6 +58,8 @@ const Tab = (props: TabProps) => {
             return () => page({ index, content })
           })}
           onChangePage={setTab}
+          className='mt-10'
+          current={tab}
         />
       </div>
     </div>

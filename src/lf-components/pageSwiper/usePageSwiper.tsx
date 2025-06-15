@@ -53,10 +53,10 @@ const usePageSwiper = (props: Props) => {
       }),
     [props.pages, props.threshold, props.animationDuration],
   )
-  const isFirstPage = useMemo(() => state.current === 0, [state.current])
+  const isFirstPage = useMemo(() => state.current === 0, [state])
   const isLastPage = useMemo(
     () => state.current === props.pages.length - 1,
-    [state.current, props.pages],
+    [state, props.pages.length],
   )
   const containerStyle = useMemo(
     () => ({
@@ -121,7 +121,7 @@ const usePageSwiper = (props: Props) => {
         }))
       }, options.animationDuration)
     },
-    [state.isProcessTransit, state.offsetX],
+    [isFirstPage, isLastPage, options.animationDuration, options.threshold, props.ref, state],
   )
   return {
     current: state.current,
