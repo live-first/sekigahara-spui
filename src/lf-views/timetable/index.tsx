@@ -5,7 +5,7 @@ import ToggleButton from '@/lf-components/ToggleButton'
 
 export const TimeTableView = () => {
   return (
-    <div className='flex flex-col pb-12 mt-8'>
+    <div className='flex flex-col pb-12 mt-4'>
       <Tab
         headers={[<div key='0'>ライブ</div>, <div key='1'>物販</div>]}
         contents={[

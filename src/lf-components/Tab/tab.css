@@ -1,7 +1,7 @@
 .tab-header > .active {
   border-bottom: 3px solid var(--color-default);
 }
-.tab-header > button:hover {
+.tab-header > button:active {
   opacity: 0.6;
   cursor: pointer;
 }

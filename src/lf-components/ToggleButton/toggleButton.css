@@ -7,7 +7,7 @@
 .toggle-btn-header > .active-2 {
   background-color: var(--color-day3);
 }
-.toggle-btn-header > button:hover {
+.toggle-btn-header > button:active {
   opacity: 0.6;
   cursor: pointer;
 }
