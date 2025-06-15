@@ -11,7 +11,7 @@ export const Footer = (props: FooterProps) => {
   const { home, lineup, timetable, other } = props
 
   return (
-    <div className='flex bg-[#d7d7d7] h-18 w-full'>
+    <div className='flex bg-navigation h-18 w-full'>
       <div className='w-1/4 border-r border-r-white'>{home}</div>
       <div className='w-1/4 border-r border-r-white'>{lineup}</div>
       <div className='w-1/4 border-r border-r-white'>{timetable}</div>

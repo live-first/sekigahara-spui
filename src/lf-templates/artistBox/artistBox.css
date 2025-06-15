@@ -22,21 +22,21 @@
   text-align: start;
 }
 .day1 {
-  background-color: #ffcd35;
+  color: #696969;
   font-size: small;
   padding: 0 10px;
   border-radius: 50px;
   margin-right: 5px;
 }
 .day2 {
-  background-color: #89ff35;
+  color: #696969;
   font-size: small;
   padding: 0 10px;
   border-radius: 50px;
   margin-right: 5px;
 }
 .day3 {
-  background-color: #35d7ff;
+  color: #696969;
   font-size: small;
   padding: 0 10px;
   border-radius: 50px;

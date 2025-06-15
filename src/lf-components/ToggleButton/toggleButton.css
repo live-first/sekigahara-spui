@@ -1,11 +1,14 @@
 .toggle-btn-header > .active-0 {
   background-color: var(--color-day1);
+  color: #696969;
 }
 .toggle-btn-header > .active-1 {
   background-color: var(--color-day2);
+  color: #696969;
 }
 .toggle-btn-header > .active-2 {
   background-color: var(--color-day3);
+  color: #696969;
 }
 .toggle-btn-header > button:active {
   opacity: 0.6;

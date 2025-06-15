@@ -20,7 +20,7 @@ export const HomeView = () => {
           alt=''
           cName='w-full'
         />
-        <div className='absolute -bottom-12 shadow-2xl left-1/2 -translate-x-1/2 w-3/4 p-2 bg-white text-center leading-7 text-2xl font-bold rounded-3xl'>
+        <div className='absolute -bottom-12 shadow-2xl left-1/2 -translate-x-1/2 w-3/4 p-2 bg-panel text-center leading-7 text-2xl font-bold rounded-3xl'>
           2025年
           <br />
           19日・20日・21日

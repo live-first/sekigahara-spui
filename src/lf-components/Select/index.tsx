@@ -1,3 +1,4 @@
+import { ChangeEventHandler } from 'react'
 import { cn } from '../utils'
 
 type Options = {
@@ -12,18 +13,20 @@ type SelectProps = {
   error?: string
   className?: string
   options: Options[]
-  onChange: () => void
+  selected: string
+  onChange: ChangeEventHandler<HTMLSelectElement>
 }
 
 export const Select = (props: SelectProps) => {
-  const { id, required, size = 'md', error, className, options, onChange } = props
+  const { id, required, size = 'md', error, className, options, selected, onChange } = props
 
   return (
     <select
       id={id}
       required={required}
       className={cn(`select-${size}`, error && 'error', className)}
-      onChange={() => onChange()}
+      onChange={onChange}
+      defaultValue={selected}
     >
       {options.map((option, index) => (
         <option value={option.value} key={index}>

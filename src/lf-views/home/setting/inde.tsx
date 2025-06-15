@@ -10,9 +10,11 @@ import { Select } from '@/lf-components/Select'
 import Link from 'next/link'
 import { ToggleSwitch } from '@/lf-components/ToggleSwitch'
 import { useState } from 'react'
+import { useTheme } from 'next-themes'
 
 export const Setting = () => {
   const [checked, setChecked] = useState<boolean>(false)
+  const { setTheme, theme } = useTheme()
   return (
     <FullModal
       button={<IoSettingsSharp className='w-full h-full' />}
@@ -49,11 +51,14 @@ export const Setting = () => {
                   <Select
                     id='theme-color'
                     options={[
-                      { value: '0', label: 'ライトモード' },
-                      { value: '1', label: 'ダークモード' },
+                      { value: 'light', label: 'ライトモード' },
+                      { value: 'dark', label: 'ダークモード' },
                     ]}
                     className='h-full'
-                    onChange={() => {}} // TODO
+                    selected={theme ?? 'light'}
+                    onChange={(e) => {
+                      setTheme(e.target.value)
+                    }}
                   />
                 </ListBox.Col>
               </ListBox.Row>

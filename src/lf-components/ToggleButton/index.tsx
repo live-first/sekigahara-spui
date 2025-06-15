@@ -36,7 +36,7 @@ const ToggleButton = (props: ToggleButtonProps) => {
           return (
             <button
               className={cn(
-                'py-2 bg-white',
+                'py-2 bg-panel',
                 `${index}` === tab && `active-${index}`,
                 `wd-${headers.length}`,
                 index + 1 !== headers.length && 'border-r-gray-400',

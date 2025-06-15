@@ -40,7 +40,7 @@ const Tab = (props: TabProps) => {
         {headers?.map((header, index) => {
           return (
             <button
-              className={cn('py-2 bg-gray-100', index === tab && 'active', `wd-${headers.length}`)}
+              className={cn('py-2 bg-square', index === tab && 'active', `wd-${headers.length}`)}
               id={`${index}`}
               onClick={(e) => {
                 setTab(Number(e.currentTarget.id))

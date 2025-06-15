@@ -9,7 +9,7 @@ export const ArtistBox = (props: ArtistType) => {
 
   return (
     <SlideUpAnimation>
-      <div className='flex flex-col p-3 bg-white rounded-sm border border-sekigahara custom-shadow artist-box w-full'>
+      <div className='flex flex-col p-3 bg-panel rounded-sm border border-sekigahara custom-shadow artist-box w-full'>
         <div className='flex flex-co w-full text-center justify-center overflow-hidden relative lg:h-[250px] md:h-[230px] sm:h-[200px] min-[150px]:h-[150px]'>
           <Image
             src={img.src}
@@ -21,9 +21,9 @@ export const ArtistBox = (props: ArtistType) => {
           <p className='whitespace-pre-wrap h-full content-center leading-5'>{name}</p>
         </div>
         <div className='tag-area'>
-          {day1 ? <span className='day1'>19日</span> : ''}
-          {day2 ? <span className='day2'>20日</span> : ''}
-          {day3 ? <span className='day3'>21日</span> : ''}
+          {day1 ? <span className='day1 bg-day1'>19日</span> : ''}
+          {day2 ? <span className='day2 bg-day2'>20日</span> : ''}
+          {day3 ? <span className='day3 bg-day3'>21日</span> : ''}
         </div>
       </div>
     </SlideUpAnimation>
