@@ -4,6 +4,9 @@
   --background: #f1f3ff;
   --foreground: #171717;
   --default: #3048ff;
+  --day1: #ffcd35;
+  --day2: #89ff35;
+  --day3: #35d7ff;
 }
 
 @theme inline {
@@ -17,6 +20,9 @@
   --color-warning: #f6ff00;
   --color-info: #058fff;
   --color-sekigahara: #e14040;
+  --color-day1: var(--day1);
+  --color-day2: var(--day2);
+  --color-day3: var(--day3);
 }
 
 @media (prefers-color-scheme: dark) {
