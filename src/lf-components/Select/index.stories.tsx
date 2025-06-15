@@ -33,6 +33,8 @@ export const Default: Story = {
         label: '3',
       },
     ],
+    selected: '1',
+    onChange: () => {},
   },
 }
 
@@ -47,5 +49,7 @@ export const Error: Story = {
         label: '1',
       },
     ],
+    selected: '1',
+    onChange: () => {},
   },
 }

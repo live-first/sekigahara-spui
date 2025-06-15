@@ -18,7 +18,7 @@ export const LineupView = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        const unitData = data.map((unit): ArtistType => {
+        const unitData = data.map((unit: ArtistType) => {
           return {
             ...unit,
             img: {
@@ -64,4 +64,3 @@ export const ArtistBoxModal = (props: ArtistType) => {
     </Modal>
   )
 }
-
