@@ -12,6 +12,8 @@
   --day1: #ffcd35;
   --day2: #89ff35;
   --day3: #35d7ff;
+  --now: #ededed;
+  --font: #000000;
 }
 [data-theme='dark'] {
   --background: #000000;
@@ -20,6 +22,8 @@
   --panel: #313131;
   --square: #4c4c4c;
   --icon: #ffffff;
+  --now: #555555;
+  --font: #ffffff;
 }
 
 @theme inline {
@@ -40,6 +44,8 @@
   --color-day1: var(--day1);
   --color-day2: var(--day2);
   --color-day3: var(--day3);
+  --color-now: var(--now);
+  --color-font: var(--font);
 }
 
 @media (prefers-color-scheme: dark) {

@@ -10,6 +10,7 @@ import { BiSolidMoviePlay } from 'react-icons/bi'
 import { Heading } from '@/lf-components/Heading'
 import { LinkLabel } from '@/lf-components/LinkLabel'
 import ListBox from '@/lf-components/ListBox'
+import { SekigaharaNow } from './now'
 
 export const HomeView = () => {
   return (
@@ -29,6 +30,9 @@ export const HomeView = () => {
         </div>
       </div>
       <div className='pt-6 pb-12 px-4'>
+        <div className='mb-4'>
+          <SekigaharaNow />
+        </div>
         <Panel size='lg'>
           <div className='flex flex-col gap-6'>
             <div className='flex gap-8 justify-center'>
@@ -52,7 +56,11 @@ export const HomeView = () => {
           </div>
         </Panel>
         <div className='flex flex-col gap-2 mt-6'>
-          <Heading tag={4} label='お知らせ' right={<LinkLabel src='https://sekigahara-idolwars.net/news' label='すべて見る' />} />
+          <Heading
+            tag={4}
+            label='お知らせ'
+            right={<LinkLabel src='https://sekigahara-idolwars.net/news' label='すべて見る' />}
+          />
           <Panel>
             <ListBox>
               <ListBox.Row>イベント情報</ListBox.Row>

@@ -26,7 +26,7 @@ export const FullModal = (props: PropsWithChildren<ModalProps>) => {
   }
 
   const Main = () => {
-    return <div className='w-dvw h-dvh'>{children}</div>
+    return <div className='w-dvw h-dvh overflow-y-scroll'>{children}</div>
   }
 
   return (
