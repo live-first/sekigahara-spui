@@ -19,11 +19,11 @@ export const StageRow = (props: StageRowProps) => {
       <div className='flex flex-col gap-1 w-2/3 justify-between'>
         <div>
           <div className='text-sm text-font'>LIVE</div>
-          <div className='text-md pl-2 font-bold text-font'>{now}</div>
+          <div className='text-md pl-2 font-bold text-font leading-[1.2]'>{now}</div>
         </div>
         <div>
           <div className='text-sm text-font'>NEXT</div>
-          <div className='text-md pl-2 font-bold text-font'>{next}</div>
+          <div className='text-md pl-2 font-bold text-font leading-[1.2]'>{next}</div>
         </div>
       </div>
     </div>

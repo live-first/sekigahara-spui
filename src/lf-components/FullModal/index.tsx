@@ -26,7 +26,11 @@ export const FullModal = (props: PropsWithChildren<ModalProps>) => {
   }
 
   const Main = () => {
-    return <div className='w-dvw h-dvh overflow-y-scroll'>{children}</div>
+    return (
+      <div className='w-dvw h-dvh overflow-y-scroll'>
+        <div className='pt-14 pb-8'>{children}</div>
+      </div>
+    )
   }
 
   return (
@@ -35,7 +39,15 @@ export const FullModal = (props: PropsWithChildren<ModalProps>) => {
         {button}
       </button>
       <div className={cn(open ? 'fixed top-0 left-0 z-20 modal-body' : 'slide-out')}>
-        <SingleViewLayout header={<Header left={<BackBtn />} center={title} />} main={<Main />} />
+        <SingleViewLayout
+          header={
+            <div className='flex flex-col w-full h-full justify-center'>
+              <Header left={<BackBtn />} center={title} />
+            </div>
+          }
+          main={<Main />}
+          topless
+        />
       </div>
     </div>
   )

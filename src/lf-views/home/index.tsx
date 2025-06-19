@@ -11,6 +11,10 @@ import { Heading } from '@/lf-components/Heading'
 import { LinkLabel } from '@/lf-components/LinkLabel'
 import ListBox from '@/lf-components/ListBox'
 import { SekigaharaNow } from './now'
+import { newsList } from '@/resouces/news'
+import { ReactNode } from 'react'
+import { sponsors } from '@/resouces/sponsor'
+import Link from 'next/link'
 
 export const HomeView = () => {
   return (
@@ -55,7 +59,7 @@ export const HomeView = () => {
             </div>
           </div>
         </Panel>
-        <div className='flex flex-col gap-2 mt-6'>
+        <Section>
           <Heading
             tag={4}
             label='お知らせ'
@@ -63,26 +67,43 @@ export const HomeView = () => {
           />
           <Panel>
             <ListBox>
-              <ListBox.Row>イベント情報</ListBox.Row>
-              <ListBox.Row>タイムテーブル解禁</ListBox.Row>
-              <ListBox.Row>出演者情報</ListBox.Row>
-              <ListBox.Row>アクセス</ListBox.Row>
-              <ListBox.Row>お知らせ</ListBox.Row>
+              {newsList.map((news, index) => (
+                <ListBox.Row key={index} data-id={news.id}>
+                  {news.title}
+                </ListBox.Row>
+              ))}
             </ListBox>
           </Panel>
-        </div>
-        <div className='flex flex-col gap-2 mt-6'>
+        </Section>
+        <Section>
           <Heading tag={4} label='開催概要' />
           <Panel>
             <ListBox>
               <ListBox.Row>イベント名　：関ケ原唄姫合戦2025</ListBox.Row>
+              <ListBox.Row>開催日　　　：2025年7月19日、20日、21日</ListBox.Row>
+              <ListBox.Row>会場　　　　：桃配運動公園</ListBox.Row>
               <ListBox.Row>主催　　　　：IDOL WARS実行委員会</ListBox.Row>
-              <ListBox.Row>協賛　　　　：</ListBox.Row>
+              <ListBox.Row>
+                ハッシュタグ：#11回目の関ケ原 / #新たな夏 / #本当の夏 / #俺たちの夏 /
+                #関ケ原唄姫合戦
+              </ListBox.Row>
               <ListBox.Row>協力　　　　：Girls Bomb!!</ListBox.Row>
             </ListBox>
           </Panel>
-        </div>
-        <div className='flex flex-col gap-2 mt-6'>
+        </Section>
+        <Section>
+          <Heading tag={4} label='協賛' />
+          <Panel>
+            <div className='flex gap-6'>
+              {sponsors.map((item, index) => (
+                <Link href={item.link ?? ''} key={index} className='w-1/3'>
+                  <Image src={item.logo} alt='' />
+                </Link>
+              ))}
+            </div>
+          </Panel>
+        </Section>
+        <Section>
           <Heading tag={4} label='注意事項' />
           <Panel>
             <Heading tag={5} label='ステージ観覧上のご注意' className='mt-4' />
@@ -130,7 +151,7 @@ export const HomeView = () => {
                 チケットの紛失・破損の際の再発行はできませんので、公演日まで大切に保管してください。
               </li>
               <li>
-                2DAYS以上の公演日のチケットを購入された方は、関ケ原唄姫合戦2024終了まで大切に保管してください。
+                2DAYS以上の公演日のチケットを購入された方は、関ケ原唄姫合戦2025終了まで大切に保管してください。
               </li>
               <li>理由を問わずお客様都合でのチケットの払い戻しは致しません。</li>
               <li>
@@ -144,8 +165,12 @@ export const HomeView = () => {
               </li>
             </ul>
           </Panel>
-        </div>
+        </Section>
       </div>
     </div>
   )
+}
+
+const Section = ({ children }: { children: ReactNode }) => {
+  return <div className='flex flex-col gap-2 mt-6'>{children}</div>
 }

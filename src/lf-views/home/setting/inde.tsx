@@ -13,7 +13,7 @@ import { useState } from 'react'
 import { useTheme } from 'next-themes'
 
 export const Setting = () => {
-  const [checked, setChecked] = useState<boolean>(false)
+  const [checked, setChecked] = useState<boolean>(true)
   const { setTheme, theme } = useTheme()
   return (
     <FullModal
