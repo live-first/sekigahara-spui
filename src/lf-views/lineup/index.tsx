@@ -33,12 +33,18 @@ export const LineupView = () => {
   //       console.error('リクエストエラー:', error)
   //     })
   // }, [])
+  const viewLineup = lineup.map((unit: ArtistType) => {
+    return {
+      ...unit,
+      img: `https://sekigahara-idolwars.net/images/2025/lineup/${unit.img}`,
+    }
+  })
 
   return (
     <div className='flex flex-col px-4 pb-12 mt-8 gap-6'>
       <Grid container spacing={2}>
-        {lineup ? (
-          lineup.map((unit, index) => {
+        {viewLineup ? (
+          viewLineup.map((unit, index) => {
             return (
               <Grid size={6} key={index}>
                 <ArtistBox {...unit} />
