@@ -8,7 +8,7 @@ export const ArtistModal = (props: ArtistType) => {
   return (
     <div className='artist-modal'>
       <div className='img-area'>
-        <Image src={img.src} alt={img.alt} />
+        <Image src={img.toString()} alt={name} />
       </div>
       <div className='artist-name'>{name}</div>
       <div className='concept'>{/* {artistData.concept} */}</div>

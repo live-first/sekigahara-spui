@@ -111,6 +111,9 @@ export const HomeView = () => {
           </Panel>
         </Section>
         <Section>
+          <Image src='https://sekigahara-idolwars.net/images/2025/sponsor/pic1.png' alt='' />
+        </Section>
+        <Section>
           <Heading tag={4} label='注意事項' />
           <Panel>
             <Heading tag={5} label='ステージ観覧上のご注意' className='mt-4' />

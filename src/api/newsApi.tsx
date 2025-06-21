@@ -9,7 +9,7 @@ export const GetNews = () => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const value = localStorage.getItem('news') ?? ''
-      setNews(JSON.parse(value))
+      setNews(JSON.parse(value as string))
     }
 
     fetch(

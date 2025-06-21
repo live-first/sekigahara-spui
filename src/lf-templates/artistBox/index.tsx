@@ -12,8 +12,8 @@ export const ArtistBox = (props: ArtistType) => {
       <div className='flex flex-col p-3 bg-panel rounded-sm border border-sekigahara custom-shadow artist-box w-full'>
         <div className='flex flex-co w-full text-center justify-center overflow-hidden relative lg:h-[250px] md:h-[230px] sm:h-[200px] min-[150px]:h-[150px]'>
           <Image
-            src={img.src}
-            alt={img.alt}
+            src={img.toString()}
+            alt={name}
             cName='w-full h-full absolute top-0 left-0 object-contain'
           />
         </div>
