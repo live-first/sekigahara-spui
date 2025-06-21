@@ -2,8 +2,8 @@ import { imgInit, ImgType } from './img'
 
 export type ArtistType = {
   name: string
-  img: ImgType
-  x?: string
+  img: ImgType | string
+  x?: string | null
   day1: boolean | null
   day2: boolean | null
   day3: boolean | null

@@ -14,15 +14,15 @@ export const HomeHeader = () => {
     <Header
       left={<Notification />}
       center={
-        theme === 'light' ? (
+        theme === 'dark' ? (
           <Image
-            src='https://sekigahara-idolwars.net/images/2025/logo.png'
+            src='https://sekigahara-idolwars.net/images/2025/logo_dark.png'
             alt='logo'
             cName='h-full'
           />
         ) : (
           <Image
-            src='https://sekigahara-idolwars.net/images/2025/logo_dark.png'
+            src='https://sekigahara-idolwars.net/images/2025/logo.png'
             alt='logo'
             cName='h-full'
           />

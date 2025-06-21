@@ -1,3 +1,5 @@
+'use client'
+
 import { Image } from '@/lf-components/Image'
 import { Panel } from '@/lf-components/Panel'
 import { SquareLink } from '@/lf-components/SquareLink'
@@ -11,12 +13,16 @@ import { Heading } from '@/lf-components/Heading'
 import { LinkLabel } from '@/lf-components/LinkLabel'
 import ListBox from '@/lf-components/ListBox'
 import { SekigaharaNow } from './now'
-import { newsList } from '@/resouces/news'
 import { ReactNode } from 'react'
 import { sponsors } from '@/resouces/sponsor'
 import Link from 'next/link'
+import Grid from '@mui/material/Grid'
+import { GetNews } from '@/api/newsApi'
 
 export const HomeView = () => {
+  const { news } = GetNews()
+  const newsList = news ?? []
+
   return (
     <div className='flex flex-col'>
       <div className='relative mb-14'>
@@ -67,11 +73,14 @@ export const HomeView = () => {
           />
           <Panel>
             <ListBox>
-              {newsList.map((news, index) => (
-                <ListBox.Row key={index} data-id={news.id}>
-                  {news.title}
-                </ListBox.Row>
-              ))}
+              {newsList
+                .sort((a, b) => a.id - b.id)
+                .slice(0, 5)
+                .map((news, index) => (
+                  <ListBox.Row key={index} data-id={news.id}>
+                    {news.title}
+                  </ListBox.Row>
+                ))}
             </ListBox>
           </Panel>
         </Section>
@@ -83,10 +92,6 @@ export const HomeView = () => {
               <ListBox.Row>開催日　　　：2025年7月19日、20日、21日</ListBox.Row>
               <ListBox.Row>会場　　　　：桃配運動公園</ListBox.Row>
               <ListBox.Row>主催　　　　：IDOL WARS実行委員会</ListBox.Row>
-              <ListBox.Row>
-                ハッシュタグ：#11回目の関ケ原 / #新たな夏 / #本当の夏 / #俺たちの夏 /
-                #関ケ原唄姫合戦
-              </ListBox.Row>
               <ListBox.Row>協力　　　　：Girls Bomb!!</ListBox.Row>
             </ListBox>
           </Panel>
@@ -94,13 +99,15 @@ export const HomeView = () => {
         <Section>
           <Heading tag={4} label='協賛' />
           <Panel>
-            <div className='flex gap-6'>
+            <Grid container spacing={2}>
               {sponsors.map((item, index) => (
-                <Link href={item.link ?? ''} key={index} className='w-1/3'>
-                  <Image src={item.logo} alt='' />
-                </Link>
+                <Grid size={4} key={index}>
+                  <Link href={item.link ?? ''} className='flex flex-col justify-center h-full'>
+                    <Image src={item.logo} alt='' />
+                  </Link>
+                </Grid>
               ))}
-            </div>
+            </Grid>
           </Panel>
         </Section>
         <Section>

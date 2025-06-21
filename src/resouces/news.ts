@@ -1,9 +1,3 @@
-type NewsType = {
-  id: number
-  date: string
-  title: string
-  context: string[]
-  img: string[]
-}
+import { NewsType } from '@/domain/news'
 
 export const newsList: NewsType[] = []
