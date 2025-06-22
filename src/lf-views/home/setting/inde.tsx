@@ -71,11 +71,14 @@ export const Setting = () => {
             <ListBox>
               <ListBox.Row className='justify-between'>
                 <ListBox.Col>バージョン</ListBox.Col>
-                <ListBox.Col>0.0.1</ListBox.Col>
+                <ListBox.Col>0.0.1(1)</ListBox.Col>
               </ListBox.Row>
               <ListBox.Row>
-                <Link href='' className='flex w-full justify-between'>
-                  <div>フィードバック</div>
+                <Link
+                  href='https://forms.gle/zg8kHdJdSFbZZt5v6'
+                  className='flex w-full justify-between'
+                >
+                  <div>お問い合わせフォーム</div>
                   <FaChevronRight className='self-center' />
                 </Link>
               </ListBox.Row>
