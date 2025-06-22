@@ -1,10 +1,9 @@
 'use client'
 
+import { useNotificationManager } from '@/hooks/use-notification-manager'
 import { FormEvent, useState } from 'react'
 
-import { useNotificationManager } from '@/hooks/use-notification-manager'
-
-export default function Page() {
+export default function Admin() {
   const [message, setMessage] = useState('')
   const {
     isSupported,

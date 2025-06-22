@@ -11,6 +11,7 @@ import Link from 'next/link'
 import { ToggleSwitch } from '@/lf-components/ToggleSwitch'
 import { useState } from 'react'
 import { useTheme } from 'next-themes'
+import { version } from '@/const/version'
 
 export const Setting = () => {
   const [checked, setChecked] = useState<boolean>(true)
@@ -71,7 +72,7 @@ export const Setting = () => {
             <ListBox>
               <ListBox.Row className='justify-between'>
                 <ListBox.Col>バージョン</ListBox.Col>
-                <ListBox.Col>0.0.1(1)</ListBox.Col>
+                <ListBox.Col>{version.version}</ListBox.Col>
               </ListBox.Row>
               <ListBox.Row>
                 <Link
