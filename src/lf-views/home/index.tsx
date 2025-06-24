@@ -18,6 +18,7 @@ import { sponsors } from '@/resouces/sponsor'
 import Link from 'next/link'
 import Grid from '@mui/material/Grid'
 import { GetNews } from '@/api/newsApi'
+import { LuListTodo } from 'react-icons/lu'
 
 export const HomeView = () => {
   const { news } = GetNews()
@@ -56,12 +57,13 @@ export const HomeView = () => {
             </div>
             <div className='flex gap-8 justify-center'>
               <SquareLink href='/' icon={<MdFastfood className='w-full h-full' />} label='フード' />
-              <SquareLink href='/' icon={<IoMdPin className='w-full h-full' />} label='アクセス' />
+              <SquareLink href='https://sekigahara-idolwars.net/access' icon={<IoMdPin className='w-full h-full' />} label='アクセス' />
               <SquareLink
                 href='/'
                 icon={<BiSolidMoviePlay className='w-full h-full' />}
                 label='配信'
               />
+              <SquareLink href='/' icon={<LuListTodo className='w-full h-full' />} label='準備' />
             </div>
           </div>
         </Panel>
