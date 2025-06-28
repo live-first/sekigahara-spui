@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './style.scss'
 import { time as timeData } from './time'
 import { Image } from '../Image'

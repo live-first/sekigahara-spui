@@ -31,7 +31,7 @@ const Tab = (props: TabProps) => {
 
   return (
     <div className='flex flex-col w-full'>
-      <div className='flex w-full tab-header fixed'>
+      <div className='flex w-full tab-header fixed z-10'>
         {headers?.map((header, index) => {
           return (
             <button

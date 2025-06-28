@@ -57,12 +57,18 @@ export const HomeView = () => {
             </div>
             <div className='flex gap-8 justify-center'>
               <SquareLink href='/' icon={<MdFastfood className='w-full h-full' />} label='フード' />
-              <SquareLink href='https://sekigahara-idolwars.net/access' icon={<IoMdPin className='w-full h-full' />} label='アクセス' />
+              <SquareLink
+                href='https://sekigahara-idolwars.net/access'
+                icon={<IoMdPin className='w-full h-full' />}
+                label='アクセス'
+              />
               <SquareLink
                 href='/'
                 icon={<BiSolidMoviePlay className='w-full h-full' />}
                 label='配信'
               />
+            </div>
+            <div className='flex gap-8 justify-center'>
               <SquareLink href='/' icon={<LuListTodo className='w-full h-full' />} label='準備' />
             </div>
           </div>
