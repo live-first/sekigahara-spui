@@ -3,7 +3,6 @@
 import { cn } from '../utils'
 import { ReactNode, useState, PropsWithChildren } from 'react'
 import './tab.css'
-import { PagerSwiper } from '../pageSwiper'
 
 const Header = ({ className, children }: PropsWithChildren<TabCommon>) => {
   return <div className={cn('flex flex-col', className)}>{children}</div>
@@ -30,10 +29,6 @@ const Tab = (props: TabProps) => {
   const { headers, contents, current } = props
   const [tab, setTab] = useState<number>(current ?? 0)
 
-  const page = ({ index, content }: { index: number; content: ReactNode }) => {
-    return <div key={index}>{content}</div>
-  }
-
   return (
     <div className='flex flex-col w-full'>
       <div className='flex w-full tab-header fixed'>
@@ -52,15 +47,12 @@ const Tab = (props: TabProps) => {
           )
         })}
       </div>
-      <div>
-        <PagerSwiper
-          pages={contents.map((content, index) => {
-            return () => page({ index, content })
-          })}
-          onChangePage={setTab}
-          className='mt-10'
-          current={tab}
-        />
+      <div className='mt-12'>
+        {contents.map((content, index) => (
+          <div key={index} className={cn(tab === index ? 'show' : 'hidden')}>
+            {content}
+          </div>
+        ))}
       </div>
     </div>
   )

@@ -52,14 +52,12 @@ const ToggleButton = (props: ToggleButtonProps) => {
           )
         })}
       </div>
-      <div>
-        {contents?.map((content, index) => {
-          return (
-            <div key={index} className={cn(`${index}` === tab ? 'show' : 'hidden')}>
-              {content}
-            </div>
-          )
-        })}
+      <div className='flex flex-col items-center'>
+        {contents?.map((content, index) => (
+          <div key={index} className={cn(`${index}` === tab ? 'block' : 'hidden')}>
+            {content}
+          </div>
+        ))}
       </div>
     </div>
   )
