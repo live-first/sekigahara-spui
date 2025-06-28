@@ -2,11 +2,11 @@
 
 import Tab from '@/lf-components/Tab'
 import ToggleButton from '@/lf-components/ToggleButton'
-import { LiveDay1 } from './live'
+import { LiveDay1, LiveDay2, LiveDay3 } from './live'
 
 export const TimeTableView = () => {
   return (
-    <div className='flex flex-col pb-12 mt-4'>
+    <div className='flex flex-col pb-12 mt-3'>
       <Tab
         headers={[<div key='0'>ライブ</div>, <div key='1'>物販</div>]}
         contents={[
@@ -32,8 +32,16 @@ const LiveTable = () => {
             <LiveDay1 />
           </div>
         </ToggleButton.Content>,
-        <ToggleButton.Content key='1' className='w-full'></ToggleButton.Content>,
-        <ToggleButton.Content key='2' className='w-full'></ToggleButton.Content>,
+        <ToggleButton.Content key='1' className='w-full'>
+          <div className='flex overflow-scroll bg-background px-2' id='timetable-master2'>
+            <LiveDay2 />
+          </div>
+        </ToggleButton.Content>,
+        <ToggleButton.Content key='2' className='w-full'>
+          <div className='flex overflow-scroll bg-background px-2' id='timetable-master3'>
+            <LiveDay3 />
+          </div>
+        </ToggleButton.Content>,
       ]}
     />
   )

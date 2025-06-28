@@ -105,6 +105,19 @@ export const HomeView = () => {
           </Panel>
         </Section>
         <Section>
+          <div className='flex gap-12 justify-center'>
+            <Link href='https://x.com/_IDOLWARS' className='bg-white rounded-full w-20 h-20 p-4'>
+              <Image src='https://sekigahara-idolwars.net/images/x-logo-black.png' alt='x-logo' />
+            </Link>
+            <Link href='/' className='bg-white rounded-full w-20 h-20 p-2'>
+              <Image
+                src='https://sekigahara-idolwars.net/images/Instagram-logo-color.png'
+                alt='instagram-logo'
+              />
+            </Link>
+          </div>
+        </Section>
+        <Section>
           <Heading tag={4} label='協賛' />
           <Panel>
             <Grid container spacing={2}>
