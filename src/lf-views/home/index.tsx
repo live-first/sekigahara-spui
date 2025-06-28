@@ -18,7 +18,7 @@ import { sponsors } from '@/resouces/sponsor'
 import Link from 'next/link'
 import Grid from '@mui/material/Grid'
 import { GetNews } from '@/api/newsApi'
-import { LuListTodo } from 'react-icons/lu'
+import { TodoList } from './todo'
 
 export const HomeView = () => {
   const { news } = GetNews()
@@ -69,7 +69,9 @@ export const HomeView = () => {
               />
             </div>
             <div className='flex gap-8 justify-center'>
-              <SquareLink href='/' icon={<LuListTodo className='w-full h-full' />} label='準備' />
+              <div>
+                <TodoList />
+              </div>
             </div>
           </div>
         </Panel>

@@ -83,6 +83,9 @@ export const Setting = () => {
                   <FaChevronRight className='self-center' />
                 </Link>
               </ListBox.Row>
+              <ListBox.Row>
+                本アプリは試用版です。
+              </ListBox.Row>
             </ListBox>
           </Panel>
         </div>

@@ -7,9 +7,18 @@ import { Modal } from '@/lf-components/Modal'
 import { ArtistBox } from '@/lf-templates/artistBox'
 import { ArtistModal } from '@/lf-templates/artistModal/artistModal'
 import { lineup } from '@/resouces/lineup'
+import { TextField } from '@/lf-components/TextField'
+import { useState } from 'react'
 
 export const LineupView = () => {
-  // const [units, setUnit] = useState<ArtistType[] | null>(null)
+  const viewLineup = lineup.map((unit: ArtistType) => {
+    return {
+      ...unit,
+      img: `https://sekigahara-idolwars.net/images/2025/lineup/${unit.img}`,
+    }
+  })
+
+  const [units, setUnit] = useState<ArtistType[] | null>(viewLineup)
 
   // useEffect(() => {
   //   fetch(
@@ -33,18 +42,28 @@ export const LineupView = () => {
   //       console.error('リクエストエラー:', error)
   //     })
   // }, [])
-  const viewLineup = lineup.map((unit: ArtistType) => {
-    return {
-      ...unit,
-      img: `https://sekigahara-idolwars.net/images/2025/lineup/${unit.img}`,
+
+  const textOnChange = (text: string) => {
+    if (text === '') {
+      return setUnit(viewLineup)
     }
-  })
+    return setUnit(
+      viewLineup.filter((unit) => {
+        return unit.name.includes(text)
+      }),
+    )
+  }
 
   return (
     <div className='flex flex-col px-4 pb-12 mt-8 gap-6'>
+      <TextField
+        id=''
+        placeholder='アーティスト名で検索'
+        onChange={(e) => textOnChange(e.target.value)}
+      />
       <Grid container spacing={2}>
-        {viewLineup ? (
-          viewLineup.map((unit, index) => {
+        {units ? (
+          units.map((unit, index) => {
             return (
               <Grid size={6} key={index}>
                 <ArtistBox {...unit} />

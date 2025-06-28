@@ -6,6 +6,7 @@
   --default: #3048ff;
   --sekigahara: #e14040;
   --navigation: #d7d7d7;
+  --header-title: #6d6d6d;
   --panel: #ffffff;
   --square: #ffffff;
   --icon: #e14040;
@@ -36,11 +37,13 @@
   --icon: #ffffff;
   --now: #555555;
   --font: #ffffff;
+  --header-title: #cdcdcd;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-header-title: var(--header-title);
   --color-default: var(--sekigahara);
   --color-navigation: var(--navigation);
   --color-panel: var(--panel);
