@@ -99,10 +99,10 @@ export const TimeTable = (props: StageType) => {
         key={data.id}
         onClick={classToggle}
       >
-        <div className='text-sekigahara font-bold text-start time-string'>
+        <div className='text-sekigahara font-bold text-start time-string leading-1'>
           {changeTimeStr(startTime)}〜{changeTimeStr(endTime)}
         </div>
-        <div className='artist-name'>{data.artistName}</div>
+        <div className='artist-name pt-3'>{data.artistName}</div>
       </button>
     )
   }

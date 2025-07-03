@@ -8,6 +8,7 @@ import { IoBus } from 'react-icons/io5'
 import { FaTshirt } from 'react-icons/fa'
 import { MdFastfood } from 'react-icons/md'
 import { IoMdPin } from 'react-icons/io'
+import { PiSunglassesFill } from 'react-icons/pi'
 import { BiSolidMoviePlay } from 'react-icons/bi'
 import { Heading } from '@/lf-components/Heading'
 import { LinkLabel } from '@/lf-components/LinkLabel'
@@ -41,12 +42,9 @@ export const HomeView = () => {
         </div>
       </div>
       <div className='pt-6 pb-12 px-4'>
-        <div className='mb-4'>
-          <SekigaharaNow />
-        </div>
-        <Panel size='lg'>
-          <div className='flex flex-col gap-6'>
-            <div className='flex gap-8 justify-center'>
+        <Panel size='sm'>
+          <div className='flex flex-col gap-3 py-2'>
+            <div className='flex gap-3 justify-center'>
               <SquareLink
                 href='https://sekigahara-idolwars.net/ticket'
                 icon={<IoTicket className='w-full h-full' />}
@@ -54,9 +52,9 @@ export const HomeView = () => {
               />
               <SquareLink href='/' icon={<IoBus className='w-full h-full' />} label='バス情報' />
               <SquareLink href='/' icon={<FaTshirt className='w-full h-full' />} label='グッズ' />
-            </div>
-            <div className='flex gap-8 justify-center'>
               <SquareLink href='/' icon={<MdFastfood className='w-full h-full' />} label='フード' />
+            </div>
+            <div className='flex gap-3 justify-center'>
               <SquareLink
                 href='https://sekigahara-idolwars.net/access'
                 icon={<IoMdPin className='w-full h-full' />}
@@ -67,14 +65,20 @@ export const HomeView = () => {
                 icon={<BiSolidMoviePlay className='w-full h-full' />}
                 label='配信'
               />
-            </div>
-            <div className='flex gap-8 justify-center'>
+              <SquareLink
+                href='/'
+                icon={<PiSunglassesFill className='w-full h-full' />}
+                label='熱中症対策'
+              />
               <div>
                 <TodoList />
               </div>
             </div>
           </div>
         </Panel>
+        <div className='mt-4'>
+          <SekigaharaNow />
+        </div>
         <Section>
           <Heading
             tag={4}
@@ -107,14 +111,26 @@ export const HomeView = () => {
           </Panel>
         </Section>
         <Section>
-          <div className='flex gap-12 justify-center'>
+          <div className='flex gap-8 justify-center'>
             <Link href='https://x.com/_IDOLWARS' className='bg-white rounded-full w-20 h-20 p-4'>
               <Image src='https://sekigahara-idolwars.net/images/x-logo-black.png' alt='x-logo' />
             </Link>
-            <Link href='/' className='bg-white rounded-full w-20 h-20 p-2'>
+            <Link
+              href='https://www.instagram.com/_idolwars'
+              className='bg-white rounded-full w-20 h-20 p-2'
+            >
               <Image
                 src='https://sekigahara-idolwars.net/images/Instagram-logo-color.png'
                 alt='instagram-logo'
+              />
+            </Link>
+            <Link
+              href='https://youtube.com/@sekigaharaidolwarspr7582'
+              className='bg-white rounded-full w-20 h-20 p-2 content-center'
+            >
+              <Image
+                src='https://sekigahara-idolwars.net/images/youtube-logo.png'
+                alt='youtube-logo'
               />
             </Link>
           </div>
@@ -133,9 +149,9 @@ export const HomeView = () => {
             </Grid>
           </Panel>
         </Section>
-        <Section>
+        {/* <Section>
           <Image src='https://sekigahara-idolwars.net/images/2025/sponsor/pic1.png' alt='' />
-        </Section>
+        </Section> */}
         <Section>
           <Heading tag={4} label='注意事項' />
           <Panel>

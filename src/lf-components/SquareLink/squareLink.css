@@ -1,13 +1,15 @@
 .square-link-sm {
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
   border-radius: 10px;
   background-color: var(--color-square);
   border: 2px solid var(--color-default);
+  color: var(--color-icon);
   box-shadow: 0 0 5px 1px #0f0f0f63;
+  padding: 0.2rem;
 }
 .square-link-label-sm {
-  font-size: 12px;
+  font-size: 10px;
   color: var(--color-icon);
   line-height: 1.2;
 }
@@ -20,6 +22,7 @@
   border: 2px solid var(--color-default);
   color: var(--color-icon);
   box-shadow: 0 0 5px 1px #0f0f0f63;
+  padding: 0.5rem;
 }
 .square-link-label-md {
   font-size: 12px;
@@ -33,7 +36,9 @@
   border-radius: 10px;
   background-color: var(--color-square);
   border: 2px solid var(--color-default);
+  color: var(--color-icon);
   box-shadow: 0 0 5px 1px #0f0f0f63;
+  padding: 0.8rem;
 }
 .square-link-label-lg {
   font-size: 12px;
