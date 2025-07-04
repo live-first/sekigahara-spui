@@ -1,4 +1,6 @@
-export const day1Stage2 = {
+import { TimeTableType } from '@/domain/timetable'
+
+export const day1Stage2: TimeTableType = {
   date: '2025-07-19',
   stageName: '豊臣ステージ',
   open: '9:00',

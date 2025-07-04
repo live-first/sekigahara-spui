@@ -88,7 +88,7 @@ export const HomeView = () => {
           <Panel>
             <ListBox>
               {newsList
-                .sort((a, b) => a.id - b.id)
+                .sort((a, b) => b.id - a.id)
                 .slice(0, 5)
                 .map((news, index) => (
                   <ListBox.Row key={index} data-id={news.id}>

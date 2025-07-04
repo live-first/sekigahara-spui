@@ -3,11 +3,12 @@ import './style.scss'
 import { time as timeData } from './time'
 import { Image } from '../Image'
 import { cn } from '../utils'
+import { TimeTableCellType } from '@/domain/timetable'
 
 type StageType = {
   config: ConfigType
   date: string
-  data: Array<ContentDataType>
+  data: Array<TimeTableCellType>
   class?: 'stage1' | 'stage2' | 'stage3' | 'stage4' | 'stage5'
   stageName: string
   isTimeStringViewLeft?: boolean
@@ -17,7 +18,7 @@ type StageType = {
 }
 
 type ContentCellType = {
-  data: ContentDataType
+  data: TimeTableCellType
   date: string
   stage?: StageType['class']
 }
@@ -29,14 +30,6 @@ type ConfigType = {
   contentPadding: number // コンテンツのpadding
   borderBoldInterval: number // borderの太字間隔
   timeStringInterval: number // 左の時間軸の表示間隔
-}
-
-type ContentDataType = {
-  id: number
-  startTime: string
-  endTime: string
-  artistName: string
-  photo: boolean | string
 }
 
 export const TimeTable = (props: StageType) => {

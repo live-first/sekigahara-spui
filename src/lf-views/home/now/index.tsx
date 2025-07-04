@@ -13,42 +13,49 @@ import { Image } from '@/lf-components/Image'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { nowPresenter } from './nowPresenter'
+import { day1Stage1 } from '@/lf-views/timetable/live/day1/stage1'
+import { day1Stage2 } from '@/lf-views/timetable/live/day1/stage2'
+import { day1Stage3 } from '@/lf-views/timetable/live/day1/stage3'
+import { day1Stage4 } from '@/lf-views/timetable/live/day1/stage4'
+import { day1Stage5 } from '@/lf-views/timetable/live/day1/stage5'
 
 type NowType = {
   datetime: string
   error?: string
   stage: {
     tokugawa: {
-      status: string
-      current: string
-      next: string
+      status: string | null
+      current: string | null
+      next: string | null
     }
     toyotomi: {
-      status: string
-      current: string
-      next: string
+      status: string | null
+      current: string | null
+      next: string | null
     }
     momokubari: {
-      status: string
-      current: string
-      next: string
+      status: string | null
+      current: string | null
+      next: string | null
     }
     sengoku: {
-      status: string
-      current: string
-      next: string
+      status: string | null
+      current: string | null
+      next: string | null
     }
     gekokujyo: {
-      status: string
-      current: string
-      next: string
+      status: string | null
+      current: string | null
+      next: string | null
     }
   }
 }
 
 export const SekigaharaNow = () => {
   const [now, setNow] = useState<NowType>()
+  const { getCurrentArtist } = nowPresenter()
 
   const ButtonBanner = () => {
     return (
@@ -90,19 +97,43 @@ export const SekigaharaNow = () => {
     )
   }
 
-  setInterval(() => {
-    fetch(
-      'https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLjlmzX3wYHGsuT9I77HaLQCDQdZ0mNo4jU6pgdCzTXxTYpoN_C3Dj9ZBN1DIYZ-61C8ResUzVLT_ehdHSvOODMbU8WGZvoUGxTg3O4EdMjtDJWgJ2sC_tw_FVTm8dkYWWS4a_JFTD2GzaTHsmc0Os97gjffFTD2YXD1x_iflWrCh80hd5_INRNWpWJxNCYx0Joa7PPO8Y6EhB2n72VniG5d2cqSnOUTDofatfv_-K5RB1MXhBoa6Be7HDyOS8CkB4QSDQsB7pk_GEfQSeTtVGiaOBp95Qg2IEJcxCnd&lib=Mxcqxjg6QEQs5pFWw4MFI4Hpjz42KUVZk',
-      { mode: 'cors' },
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setNow(data)
-      })
-      .catch((error) => {
-        console.error('リクエストエラー:', error)
-      })
-  }, 60000)
+  const getStageStatus = () => {
+    const tokugawa = getCurrentArtist(day1Stage1.data)
+    const toyotomi = getCurrentArtist(day1Stage2.data)
+    const sengoku = getCurrentArtist(day1Stage3.data)
+    const momokubari = getCurrentArtist(day1Stage4.data)
+    const gekokkujyo = getCurrentArtist(day1Stage5.data)
+    setNow({
+      datetime: `${new Date()}`,
+      stage: {
+        tokugawa: tokugawa,
+        toyotomi: toyotomi,
+        momokubari: momokubari,
+        sengoku: sengoku,
+        gekokujyo: gekokkujyo,
+      },
+    })
+  }
+
+  useEffect(() => {
+    getStageStatus()
+    const timer = setInterval(getStageStatus, 60000)
+
+    return () => clearInterval(timer)
+  }, [])
+  // setInterval(() => {
+  //   fetch(
+  //     '',
+  //     { mode: 'cors' },
+  //   )
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setNow(data)
+  //     })
+  //     .catch((error) => {
+  //       console.error('リクエストエラー:', error)
+  //     })
+  // }, 60000)
 
   return (
     <FullModal
