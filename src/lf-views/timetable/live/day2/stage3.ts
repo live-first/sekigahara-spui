@@ -252,7 +252,7 @@ export const day2Stage3 = {
       id: 36,
       startTime: '2025-07-20T10:30:00.000Z',
       endTime: '2025-07-20T10:50:00.000Z',
-      artistName: 'パラレルサイダー',
+      artistName: 'ポンコツコンポ',
       photo: '',
     },
     {

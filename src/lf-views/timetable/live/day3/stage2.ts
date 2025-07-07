@@ -28,7 +28,7 @@ export const day3Stage2 = {
       id: 4,
       startTime: '2025-07-21T01:45:00.000Z',
       endTime: '2025-07-21T02:05:00.000Z',
-      artistName: 'ロードモバイル',
+      artistName: '世界逆転宣言！',
       photo: '',
     },
     {

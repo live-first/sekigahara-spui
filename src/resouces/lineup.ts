@@ -12,7 +12,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'EYE CANDY',
-    x: null,
+    x: 'https://x.com/EYECANDY_idol',
     day1: true,
     day2: null,
     day3: true,
@@ -39,7 +39,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'IDOLEST',
-    x: null,
+    x: 'https://x.com/tokyoidolest',
     day1: true,
     day2: true,
     day3: null,
@@ -66,7 +66,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'あおぞらをキミに',
-    x: null,
+    x: 'https://x.com/aozorawokimini',
     day1: null,
     day2: true,
     day3: true,
@@ -82,10 +82,18 @@ export const lineup: ArtistType[] = [
     img: 'アキシブproject.jpg',
     read: 'アキシブプロジェクト',
   },
-  { name: 'AQA', x: null, day1: null, day2: null, day3: true, img: 'AQA.jpg', read: 'アクア' },
+  {
+    name: 'AQA',
+    x: 'https://x.com/AQA_info',
+    day1: null,
+    day2: null,
+    day3: true,
+    img: 'AQA.jpg',
+    read: 'アクア',
+  },
   {
     name: 'あくまで天使',
-    x: null,
+    x: 'https://x.com/akuten_info',
     day1: null,
     day2: true,
     day3: null,
@@ -103,7 +111,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'アステリア',
-    x: null,
+    x: 'https://x.com/Asteria_group',
     day1: null,
     day2: true,
     day3: null,
@@ -121,7 +129,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'アップアップガールズ（２）',
-    x: null,
+    x: 'https://x.com/uug2official',
     day1: null,
     day2: null,
     day3: true,
@@ -130,7 +138,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: '雨のち、ハレーション',
-    x: null,
+    x: 'https://x.com/AMEHAREOfficial',
     day1: true,
     day2: null,
     day3: null,
@@ -148,17 +156,25 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'アルテミスの翼',
-    x: null,
+    x: 'https://x.com/artemis_idol7',
     day1: true,
     day2: true,
     day3: null,
     img: 'アルテミスの翼.jpeg',
     read: 'アルテミスノツバサ',
   },
-  { name: 'α', x: null, day1: true, day2: null, day3: null, img: 'α.jpg', read: 'アルファ' },
+  {
+    name: 'α',
+    x: 'https://x.com/alpha_info_',
+    day1: true,
+    day2: null,
+    day3: null,
+    img: 'α.jpg',
+    read: 'アルファ',
+  },
   {
     name: 'いざ参らん',
-    x: null,
+    x: 'https://x.com/izamairan2023',
     day1: true,
     day2: null,
     day3: null,
@@ -194,7 +210,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'ESTLINK☆',
-    x: null,
+    x: 'https://x.com/estlink2021',
     day1: null,
     day2: null,
     day3: true,
@@ -203,7 +219,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'エラバレシ',
-    x: null,
+    x: 'https://x.com/_erabareshi_',
     day1: null,
     day2: null,
     day3: true,
@@ -212,18 +228,34 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'ゑんら',
-    x: null,
+    x: 'https://x.com/wyenra',
     day1: true,
     day2: null,
     day3: null,
     img: '%E3%82%91%E3%82%93%E3%82%89.HEIC',
     read: 'エンラ',
   },
-  { name: 'OS☆U', x: null, day1: null, day2: null, day3: true, img: 'OS☆U.png', read: 'オーエスユー' },
-  { name: 'Ｏ₂', x: null, day1: null, day2: null, day3: true, img: 'Ｏ₂.png', read: 'オーツー' },
+  {
+    name: 'OS☆U',
+    x: 'https://x.com/osuofficial',
+    day1: null,
+    day2: null,
+    day3: true,
+    img: 'OS☆U.png',
+    read: 'オーエスユー',
+  },
+  {
+    name: 'Ｏ₂',
+    x: 'https://x.com/o2_429official',
+    day1: null,
+    day2: null,
+    day3: true,
+    img: 'Ｏ₂.png',
+    read: 'オーツー',
+  },
   {
     name: 'オカシリゾート',
-    x: null,
+    x: 'https://x.com/okashi_staff',
     day1: null,
     day2: true,
     day3: null,
@@ -232,7 +264,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'KAIJU ON THE STAGE',
-    x: null,
+    x: 'https://x.com/kaiju_staff',
     day1: null,
     day2: true,
     day3: null,
@@ -259,7 +291,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'カリスマめんざいふっ！',
-    x: null,
+    x: 'https://x.com/KariMen_idol',
     day1: true,
     day2: true,
     day3: null,
@@ -286,7 +318,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'キミニハネ',
-    x: null,
+    x: 'https://x.com/kiminihane_info',
     day1: null,
     day2: true,
     day3: null,
@@ -295,7 +327,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: '逆転ねこぱんちっ！',
-    x: null,
+    x: 'https://x.com/tenneko_NAGOYA',
     day1: true,
     day2: null,
     day3: null,
@@ -304,7 +336,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'CAL&RES',
-    x: null,
+    x: 'https://x.com/calresofficial',
     day1: null,
     day2: true,
     day3: true,
@@ -313,7 +345,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'Qu♡Aly',
-    x: null,
+    x: 'https://x.com/qualy_info',
     day1: null,
     day2: true,
     day3: true,
@@ -340,7 +372,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'キュン!?恋堕ちキューピッド',
-    x: null,
+    x: 'https://x.com/qpid_info',
     day1: true,
     day2: null,
     day3: null,
@@ -358,7 +390,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'GILTY×GILTY',
-    x: null,
+    x: 'https://x.com/GILTYxGILTY',
     day1: null,
     day2: true,
     day3: null,
@@ -367,7 +399,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'Glim Assembler',
-    x: null,
+    x: 'https://x.com/Glimas_info',
     day1: true,
     day2: true,
     day3: null,
@@ -430,7 +462,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'ジエメイ',
-    x: null,
+    x: 'https://x.com/jiemei_idol',
     day1: null,
     day2: null,
     day3: true,
@@ -439,7 +471,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'JAPANARIZM',
-    x: null,
+    x: 'https://x.com/JAPANARIZM_info',
     day1: null,
     day2: true,
     day3: true,
@@ -448,7 +480,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'JamsCollection',
-    x: null,
+    x: 'https://x.com/JamsCollection',
     day1: null,
     day2: true,
     day3: true,
@@ -457,7 +489,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: '終末のアンセム',
-    x: null,
+    x: 'https://x.com/owathem',
     day1: true,
     day2: null,
     day3: null,
@@ -466,7 +498,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'Jewel☆Garden',
-    x: null,
+    x: 'https://x.com/_JewelGarden_',
     day1: null,
     day2: true,
     day3: null,
@@ -502,7 +534,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'SUPER☆GiRLS',
-    x: null,
+    x: 'https://x.com/SUPERGiRLS_AMG',
     day1: null,
     day2: null,
     day3: true,
@@ -511,7 +543,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'すーぱーぷーばぁー!!',
-    x: null,
+    x: 'https://x.com/_superpouvoir',
     day1: null,
     day2: true,
     day3: true,
@@ -520,7 +552,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'ZUTTOMOTTO',
-    x: null,
+    x: 'https://x.com/zuttomoofficial',
     day1: null,
     day2: true,
     day3: true,
@@ -529,7 +561,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'STELLASTELLA',
-    x: null,
+    x: 'https://x.com/STESTE_official',
     day1: true,
     day2: true,
     day3: null,
@@ -564,6 +596,15 @@ export const lineup: ArtistType[] = [
     read: 'セイラ',
   },
   {
+    name: '世界逆転宣言！',
+    x: 'https://x.com/sekai_gyakuten',
+    day1: null,
+    day2: true,
+    day3: true,
+    img: '世界逆転宣言！.jpg',
+    read: 'セカイギャクテンセンゲン',
+  },
+  {
     name: 'セカモノ',
     x: 'https://x.com/sekamono',
     day1: true,
@@ -583,7 +624,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'ゼロキョリハーツ',
-    x: null,
+    x: 'https://x.com/ZKH_official',
     day1: true,
     day2: null,
     day3: null,
@@ -592,7 +633,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'Cent Heaven',
-    x: null,
+    x: 'https://x.com/CentH_official',
     day1: null,
     day2: null,
     day3: true,
@@ -610,7 +651,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'WT★Egret',
-    x: null,
+    x: 'https://x.com/wt_egret',
     day1: null,
     day2: null,
     day3: true,
@@ -627,8 +668,17 @@ export const lineup: ArtistType[] = [
     read: 'ダブルヴィー',
   },
   {
+    name: 'ちあもあ！',
+    x: 'https://x.com/Tiamoa_',
+    day1: true,
+    day2: null,
+    day3: null,
+    img: 'ちあもあ.png',
+    read: 'チアモア',
+  },
+  {
     name: 'チキータ',
-    x: null,
+    x: 'https://x.com/Chegattz',
     day1: true,
     day2: null,
     day3: null,
@@ -637,7 +687,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: '月に足跡を残した少女達は一体何を見たのか...',
-    x: null,
+    x: 'https://x.com/tsukiato_staff',
     day1: null,
     day2: null,
     day3: true,
@@ -646,7 +696,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'ティラミス',
-    x: null,
+    x: 'https://x.com/tiramis_staff',
     day1: true,
     day2: null,
     day3: null,
@@ -662,7 +712,15 @@ export const lineup: ArtistType[] = [
     img: '手羽先センセーション.jpg',
     read: 'テバサキセンセーション',
   },
-  { name: 'dela', x: null, day1: null, day2: null, day3: true, img: 'dela.jpeg', read: 'デラ' },
+  {
+    name: 'dela',
+    x: 'https://x.com/dela_nbgf',
+    day1: null,
+    day2: null,
+    day3: true,
+    img: 'dela.jpeg',
+    read: 'デラ',
+  },
   {
     name: 'テラテラ',
     x: 'https://x.com/teratera_staff',
@@ -674,7 +732,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: '天空のシラバス',
-    x: null,
+    x: 'https://x.com/skysyllabus',
     day1: null,
     day2: null,
     day3: true,
@@ -699,7 +757,15 @@ export const lineup: ArtistType[] = [
     img: '点染テンセイ少女。.jpg',
     read: 'テンセンテンセイショウジョ',
   },
-  { name: 'TENRIN', x: null, day1: null, day2: true, day3: true, img: 'TENRIN.jpg', read: 'テンリン' },
+  {
+    name: 'TENRIN',
+    x: 'https://x.com/TENRIN_official',
+    day1: null,
+    day2: true,
+    day3: true,
+    img: 'TENRIN.jpg',
+    read: 'テンリン',
+  },
   {
     name: 'Drug&Drop',
     x: 'https://x.com/DrugDrop_info',
@@ -738,7 +804,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'ナト☆カン',
-    x: null,
+    x: 'https://x.com/NATOKAAAN',
     day1: null,
     day2: true,
     day3: null,
@@ -747,7 +813,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'なないろ∞ミルキーウェイ',
-    x: null,
+    x: 'https://x.com/7__Milkyway',
     day1: null,
     day2: true,
     day3: true,
@@ -783,7 +849,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'にっぽんワチャチャ',
-    x: null,
+    x: 'https://x.com/nippon_wachacha',
     day1: null,
     day2: null,
     day3: true,
@@ -801,7 +867,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: '脳内パステル',
-    x: null,
+    x: 'https://x.com/Nopas_Official',
     day1: null,
     day2: true,
     day3: true,
@@ -810,7 +876,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'ノルニル',
-    x: null,
+    x: 'https://x.com/nornir_0611',
     day1: true,
     day2: true,
     day3: null,
@@ -836,8 +902,17 @@ export const lineup: ArtistType[] = [
     read: 'ハイスピリッツ',
   },
   {
+    name: 'はいどーも！テラスマです！',
+    x: 'https://x.com/TeraSmile1',
+    day1: null,
+    day2: true,
+    day3: true,
+    img: 'テラスマ.png',
+    read: 'ハイドーモ',
+  },
+  {
     name: '蜂蜜★皇帝',
-    x: null,
+    x: 'https://x.com/hachipera',
     day1: true,
     day2: null,
     day3: null,
@@ -873,7 +948,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'Bunny La Crew',
-    x: null,
+    x: 'https://x.com/BunnyLaCrew',
     day1: true,
     day2: null,
     day3: null,
@@ -891,7 +966,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'パラディーク',
-    x: null,
+    x: 'https://x.com/para_deeq',
     day1: null,
     day2: null,
     day3: true,
@@ -900,7 +975,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'パラレルサイダー',
-    x: null,
+    x: 'https://x.com/parasai_info',
     day1: null,
     day2: true,
     day3: true,
@@ -909,7 +984,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: "parfait d'ange",
-    x: null,
+    x: 'https://x.com/info_parfait',
     day1: true,
     day2: true,
     day3: true,
@@ -927,7 +1002,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'ハレとハレ！',
-    x: null,
+    x: 'https://x.com/_HARETOHARE',
     day1: null,
     day2: null,
     day3: true,
@@ -936,7 +1011,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'ビーバイユー',
-    x: null,
+    x: 'https://x.com/bebyu_official',
     day1: true,
     day2: true,
     day3: true,
@@ -954,7 +1029,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'ひとつキラリ',
-    x: null,
+    x: 'https://x.com/hitotsukirari',
     day1: true,
     day2: null,
     day3: null,
@@ -972,7 +1047,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'プエラの絶対値',
-    x: null,
+    x: 'https://x.com/Puella_official',
     day1: null,
     day2: true,
     day3: null,
@@ -990,7 +1065,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'ぷりしえーる',
-    x: null,
+    x: 'https://x.com/Pricie_official',
     day1: null,
     day2: null,
     day3: true,
@@ -1016,8 +1091,17 @@ export const lineup: ArtistType[] = [
     read: 'フルーティー',
   },
   {
+    name: 'ぺりきゅらむ',
+    x: 'https://x.com/info_periculum',
+    day1: null,
+    day2: null,
+    day3: true,
+    img: 'ぺりきゅらむ.png',
+    read: 'ペリキュラム',
+  },
+  {
     name: 'ベンジャス！',
-    x: null,
+    x: 'https://x.com/benjas_official',
     day1: true,
     day2: null,
     day3: null,
@@ -1026,7 +1110,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'HOT DOG CAT',
-    x: null,
+    x: 'https://x.com/HOTDOGCAT_info',
     day1: true,
     day2: true,
     day3: null,
@@ -1035,7 +1119,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: "Poppin' Parade",
-    x: null,
+    x: 'https://x.com/official_popipa',
     day1: true,
     day2: true,
     day3: null,
@@ -1089,7 +1173,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: "Ma'Scar'Piece",
-    x: null,
+    x: 'https://x.com/mascarpiece',
     day1: true,
     day2: true,
     day3: null,
@@ -1098,7 +1182,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'MATANAGOYA',
-    x: null,
+    x: 'https://x.com/matanagoya',
     day1: true,
     day2: null,
     day3: null,
@@ -1114,10 +1198,18 @@ export const lineup: ArtistType[] = [
     img: 'まねきケチャ.jpg',
     read: 'マネキケチャ',
   },
-  { name: '蜜兎', x: null, day1: null, day2: true, day3: true, img: '蜜兎.png', read: 'ミツウサギ' },
+  {
+    name: '蜜兎',
+    x: 'https://x.com/HNBN_official',
+    day1: null,
+    day2: true,
+    day3: true,
+    img: '蜜兎.png',
+    read: 'ミツウサギ',
+  },
   {
     name: 'みらくらんど',
-    x: null,
+    x: 'https://x.com/MCL39_official',
     day1: null,
     day2: null,
     day3: true,
@@ -1126,7 +1218,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'Milky＊Sphene',
-    x: null,
+    x: 'https://x.com/MilkySphene',
     day1: true,
     day2: true,
     day3: true,
@@ -1135,7 +1227,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'メイビーME',
-    x: null,
+    x: 'https://x.com/MAYBEME0707',
     day1: true,
     day2: true,
     day3: null,
@@ -1160,7 +1252,15 @@ export const lineup: ArtistType[] = [
     img: 'Melty BeaR.png',
     read: 'メルティベア',
   },
-  { name: 'Y∀KiN', x: null, day1: true, day2: true, day3: null, img: 'Y∀KiN.png', read: 'ヤキン' },
+  {
+    name: 'Y∀KiN',
+    x: 'https://x.com/YAKiN_0209',
+    day1: true,
+    day2: true,
+    day3: null,
+    img: 'Y∀KiN.png',
+    read: 'ヤキン',
+  },
   {
     name: '夜光性アミューズ',
     x: 'https://x.com/Yoruamiofficial',
@@ -1172,7 +1272,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: '夜宙☆ShiNew’',
-    x: null,
+    x: 'https://x.com/star_shinew',
     day1: null,
     day2: null,
     day3: true,
@@ -1181,7 +1281,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'ヤンチャン学園音楽部',
-    x: null,
+    x: 'https://x.com/YGakuenmember',
     day1: true,
     day2: true,
     day3: null,
@@ -1199,17 +1299,25 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'ラビットビット',
-    x: null,
+    x: 'https://x.com/rabbitbit2022',
     day1: null,
     day2: true,
     day3: null,
     img: 'ラビットビット.jpg',
     read: 'ラビットビット',
   },
-  { name: 'LOVEME', x: null, day1: true, day2: null, day3: null, img: 'LOVEME.jpg', read: 'ラブミー' },
+  {
+    name: 'LOVEME',
+    x: 'https://x.com/LOVEME_idol',
+    day1: true,
+    day2: null,
+    day3: null,
+    img: 'LOVEME.jpg',
+    read: 'ラブミー',
+  },
   {
     name: 'Re:Clash',
-    x: null,
+    x: 'https://x.com/reclash0922',
     day1: null,
     day2: null,
     day3: true,
@@ -1227,7 +1335,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'RiNCENT#',
-    x: null,
+    x: 'https://x.com/rincent_idol',
     day1: null,
     day2: true,
     day3: true,
@@ -1254,7 +1362,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'Loulouchouchou',
-    x: null,
+    x: 'https://x.com/Llcc_info',
     day1: true,
     day2: null,
     day3: null,
@@ -1272,7 +1380,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'LADYBABY',
-    x: null,
+    x: 'https://x.com/LADYBABY_JP',
     day1: null,
     day2: true,
     day3: true,
@@ -1281,7 +1389,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'Lollipop♡CHU',
-    x: null,
+    x: 'https://x.com/Lollipop__CHU',
     day1: true,
     day2: true,
     day3: true,
@@ -1299,7 +1407,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'われらがプワプワプーワプワ',
-    x: null,
+    x: 'https://x.com/puwapuwapu_wa',
     day1: true,
     day2: true,
     day3: null,
@@ -1317,7 +1425,7 @@ export const lineup: ArtistType[] = [
   },
   {
     name: 'わんふぁす！',
-    x: null,
+    x: 'https://x.com/WONFAS_official',
     day1: true,
     day2: null,
     day3: null,

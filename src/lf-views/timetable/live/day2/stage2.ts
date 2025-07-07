@@ -14,7 +14,7 @@ export const day2Stage2 = {
       id: 2,
       startTime: '2025-07-20T01:05:00.000Z',
       endTime: '2025-07-20T01:25:00.000Z',
-      artistName: 'ロードモバイル',
+      artistName: 'はいどーも！テラスマです！',
       photo: '',
     },
     {

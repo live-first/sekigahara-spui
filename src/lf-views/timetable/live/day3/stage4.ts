@@ -175,7 +175,7 @@ export const day3Stage4 = {
       id: 25,
       startTime: '2025-07-21T07:05:00.000Z',
       endTime: '2025-07-21T07:20:00.000Z',
-      artistName: 'ロードモバイル',
+      artistName: 'ぺりきゅらむ',
       photo: '',
     },
     {

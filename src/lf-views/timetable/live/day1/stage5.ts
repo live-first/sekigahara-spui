@@ -128,7 +128,7 @@ export const day1Stage5: TimeTableType = {
       id: 18,
       startTime: '2025-07-19T08:45:00.000Z',
       endTime: '2025-07-19T09:05:00.000Z',
-      artistName: 'ロードモバイル',
+      artistName: 'ちあもあ！',
       photo: false,
     },
     {

@@ -21,7 +21,7 @@ export const day3Stage3 = {
       id: 3,
       startTime: '2025-07-21T01:10:00.000Z',
       endTime: '2025-07-21T01:25:00.000Z',
-      artistName: 'ロードモバイル',
+      artistName: 'はいどーも！テラスマです！',
       photo: '',
     },
     {
@@ -35,7 +35,7 @@ export const day3Stage3 = {
       id: 5,
       startTime: '2025-07-21T01:55:00.000Z',
       endTime: '2025-07-21T02:10:00.000Z',
-      artistName: 'ロードモバイル',
+      artistName: 'ぺりきゅらむ',
       photo: '',
     },
     {

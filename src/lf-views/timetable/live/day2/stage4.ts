@@ -7,7 +7,7 @@ export const day2Stage4 = {
       id: 1,
       startTime: '2025-07-20T00:45:00.000Z',
       endTime: '2025-07-20T01:05:00.000Z',
-      artistName: 'ポンコツコンポ',
+      artistName: 'パラレルサイダー',
       photo: '',
     },
     {
@@ -42,7 +42,7 @@ export const day2Stage4 = {
       id: 6,
       startTime: '2025-07-20T02:10:00.000Z',
       endTime: '2025-07-20T02:25:00.000Z',
-      artistName: 'ロードモバイル',
+      artistName: '世界逆転宣言！',
       photo: '',
     },
     {
@@ -98,7 +98,7 @@ export const day2Stage4 = {
       id: 14,
       startTime: '2025-07-20T04:20:00.000Z',
       endTime: '2025-07-20T04:35:00.000Z',
-      artistName: 'ロードモバイル',
+      artistName: 'はいどーも！テラスマです！',
       photo: '',
     },
     {
