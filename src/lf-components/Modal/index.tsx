@@ -19,12 +19,7 @@ export const Modal = (props: PropsWithChildren<ModalProps>) => {
       <button className='flex flex-col w-full' onClick={() => setOpen(true)}>
         {button}
       </button>
-      <div
-        className={cn(
-          open ? 'overlay fixed top-0 left-0 z-[200]' : 'hidden',
-          'relative',
-        )}
-      >
+      <div className={cn(open ? 'w-full h-full overlay fixed top-0 left-0 z-[200]' : 'hidden')}>
         <button
           className='w-full h-full bg-transparent'
           onClick={() => overlay && setOpen(false)}

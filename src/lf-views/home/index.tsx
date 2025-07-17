@@ -20,6 +20,7 @@ import Link from 'next/link'
 import Grid from '@mui/material/Grid'
 import { GetNews } from '@/api/newsApi'
 import { TodoList } from './todo'
+import { Modal } from '@/lf-components/Modal'
 
 export const HomeView = () => {
   const { news } = GetNews()
@@ -43,37 +44,57 @@ export const HomeView = () => {
       </div>
       <div className='pt-6 pb-12 px-4'>
         <Panel size='sm'>
-          <div className='flex flex-col gap-3 py-2'>
-            <div className='flex gap-3 justify-center'>
-              <SquareLink
-                href='https://sekigahara-idolwars.net/ticket'
-                icon={<IoTicket className='w-full h-full' />}
-                label='チケット'
-              />
-              <SquareLink href='/' icon={<IoBus className='w-full h-full' />} label='バス情報' />
-              <SquareLink href='/' icon={<FaTshirt className='w-full h-full' />} label='グッズ' />
-              <SquareLink href='/' icon={<MdFastfood className='w-full h-full' />} label='フード' />
-            </div>
-            <div className='flex gap-3 justify-center'>
-              <SquareLink
-                href='https://sekigahara-idolwars.net/access'
-                icon={<IoMdPin className='w-full h-full' />}
-                label='アクセス'
-              />
-              <SquareLink
-                href='/'
-                icon={<BiSolidMoviePlay className='w-full h-full' />}
-                label='配信'
-              />
-              <SquareLink
-                href='/'
-                icon={<PiSunglassesFill className='w-full h-full' />}
-                label='熱中症対策'
-              />
-              <div>
-                <TodoList />
-              </div>
-            </div>
+          <div className='flex flex-col content-center p-2'>
+            <Grid container spacing={1}>
+              <Grid size={3}>
+                <SquareLink
+                  href='https://sekigahara-idolwars.net/ticket'
+                  icon={<IoTicket className='w-full h-full' />}
+                  label='チケット'
+                />
+              </Grid>
+              <Grid size={3}>
+                <div className='flex flex-col justify-self-center'>
+                  <BusInfo />
+                </div>
+              </Grid>
+              <Grid size={3}>
+                <SquareLink href='/' icon={<FaTshirt className='w-full h-full' />} label='グッズ' />
+              </Grid>
+              <Grid size={3}>
+                <SquareLink
+                  href='/'
+                  icon={<MdFastfood className='w-full h-full' />}
+                  label='フード'
+                />
+              </Grid>
+              <Grid size={3}>
+                <SquareLink
+                  href='https://sekigahara-idolwars.net/access'
+                  icon={<IoMdPin className='w-full h-full' />}
+                  label='アクセス'
+                />
+              </Grid>
+              <Grid size={3}>
+                <SquareLink
+                  href='/'
+                  icon={<BiSolidMoviePlay className='w-full h-full' />}
+                  label='配信'
+                />
+              </Grid>
+              <Grid size={3}>
+                <SquareLink
+                  href='/'
+                  icon={<PiSunglassesFill className='w-full h-full' />}
+                  label='熱中症対策'
+                />
+              </Grid>
+              <Grid size={3}>
+                <div className='flex flex-col justify-self-center'>
+                  <TodoList />
+                </div>
+              </Grid>
+            </Grid>
           </div>
         </Panel>
         <div className='mt-4'>
@@ -222,4 +243,19 @@ export const HomeView = () => {
 
 const Section = ({ children }: { children: ReactNode }) => {
   return <div className='flex flex-col gap-2 mt-6'>{children}</div>
+}
+
+const BusInfo = () => {
+  return (
+    <Modal
+      button={<SquareLink href='/' icon={<IoBus className='w-full h-full' />} label='バス情報' />}
+      hideCloseBottomBtn
+    >
+      <div className='text-center overflow-auto'>
+        <div className='w-full'>
+          <Image src='https://sekigahara-idolwars.net/images/2025/bus/bus_info.JPG' alt='bus_info' />
+        </div>
+      </div>
+    </Modal>
+  )
 }

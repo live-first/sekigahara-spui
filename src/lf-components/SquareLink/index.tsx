@@ -13,7 +13,7 @@ export type SquareLinkProps = {
 export const SquareLink = (props: SquareLinkProps) => {
   const { href, size = 'sm', icon, label } = props
   return (
-    <Link href={href} prefetch={true} className={cn(`square-link-${size}`, 'flex flex-col items-center justify-between')}>
+    <Link href={href} prefetch={true} className={cn(`square-link-${size}`, 'flex flex-col items-center justify-between justify-self-center')}>
       <div className='h-2/3 w-full'>{icon}</div>
       <div className={cn(`square-link-label-${size}`)}>{label}</div>
     </Link>
