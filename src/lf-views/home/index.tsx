@@ -6,7 +6,7 @@ import { SquareLink } from '@/lf-components/SquareLink'
 import { IoTicket } from 'react-icons/io5'
 import { IoBus } from 'react-icons/io5'
 import { FaTshirt } from 'react-icons/fa'
-import { MdFastfood } from 'react-icons/md'
+import { FaMap } from 'react-icons/fa'
 import { IoMdPin } from 'react-icons/io'
 import { PiSunglassesFill } from 'react-icons/pi'
 import { BiSolidMoviePlay } from 'react-icons/bi'
@@ -62,11 +62,9 @@ export const HomeView = () => {
                 <SquareLink href='/' icon={<FaTshirt className='w-full h-full' />} label='グッズ' />
               </Grid>
               <Grid size={3}>
-                <SquareLink
-                  href='/'
-                  icon={<MdFastfood className='w-full h-full' />}
-                  label='フード'
-                />
+                <div className='flex flex-col justify-self-center'>
+                  <AreaMap />
+                </div>
               </Grid>
               <Grid size={3}>
                 <SquareLink
@@ -245,6 +243,24 @@ const Section = ({ children }: { children: ReactNode }) => {
   return <div className='flex flex-col gap-2 mt-6'>{children}</div>
 }
 
+const AreaMap = () => {
+  return (
+    <Modal
+      button={<SquareLink icon={<FaMap className='h-full w-full' />} label='マップ' />}
+      hideCloseBottomBtn
+    >
+      <div className='text-center overflow-auto'>
+        <div className='w-full'>
+          <Image
+            src='https://sekigahara-idolwars.net/images/2025/map/area_map.JPG'
+            alt='area_map'
+          />
+        </div>
+      </div>
+    </Modal>
+  )
+}
+
 const BusInfo = () => {
   return (
     <Modal
@@ -253,7 +269,10 @@ const BusInfo = () => {
     >
       <div className='text-center overflow-auto'>
         <div className='w-full'>
-          <Image src='https://sekigahara-idolwars.net/images/2025/bus/bus_info.JPG' alt='bus_info' />
+          <Image
+            src='https://sekigahara-idolwars.net/images/2025/bus/bus_info.JPG'
+            alt='bus_info'
+          />
         </div>
       </div>
     </Modal>
