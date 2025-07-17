@@ -9,7 +9,7 @@ type StageType = {
   config: ConfigType
   date: string
   data: Array<TimeTableCellType>
-  class?: 'stage1' | 'stage2' | 'stage3' | 'stage4' | 'stage5'
+  class?: 'stage1' | 'stage2' | 'stage3' | 'stage4' | 'stage5' | 'tent1' | 'tent2'
   stageName: string
   isTimeStringViewLeft?: boolean
   isTimeStringViewRight?: boolean
@@ -46,6 +46,10 @@ export const TimeTable = (props: StageType) => {
       ? 'bg-head-stage4'
       : stage === 'stage5'
       ? 'bg-head-stage5'
+      : stage === 'tent1'
+      ? 'bg-head-tent1'
+      : stage === 'tent2'
+      ? 'bg-head-tent2'
       : ''
   }
 
@@ -60,6 +64,10 @@ export const TimeTable = (props: StageType) => {
       ? 'bg-stage4'
       : stage === 'stage5'
       ? 'bg-stage5'
+      : stage === 'tent1'
+      ? 'bg-tent1'
+      : stage === 'tent2'
+      ? 'bg-tent2'
       : ''
   }
 
@@ -122,7 +130,7 @@ export const TimeTable = (props: StageType) => {
         )}
         style={{ height: `${config.tableHeadCellHeight}px` }}
       >
-        {stageName && img === undefined && <span>{stageName}</span>}
+        {stageName && img === undefined && <span className='text-default'>{stageName}</span>}
         <div className='w-full h-full pt-[10px]'>
           {img && <Image src={img} alt='' />}
           {open && (

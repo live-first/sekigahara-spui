@@ -3,6 +3,7 @@
 import Tab from '@/lf-components/Tab'
 import ToggleButton from '@/lf-components/ToggleButton'
 import { LiveDay1, LiveDay2, LiveDay3 } from './live'
+import { GreetingDay1, GreetingDay2, GreetingDay3 } from './greeting'
 
 export const TimeTableView = () => {
   return (
@@ -28,17 +29,17 @@ const LiveTable = () => {
       headers={[<div key='0'>DAY1</div>, <div key='1'>DAY2</div>, <div key='2'>DAY3</div>]}
       contents={[
         <ToggleButton.Content key='0' className='w-full'>
-          <div className='flex overflow-scroll bg-background px-2' id='timetable-master1'>
+          <div className='flex overflow-scroll bg-background px-2'>
             <LiveDay1 />
           </div>
         </ToggleButton.Content>,
         <ToggleButton.Content key='1' className='w-full'>
-          <div className='flex overflow-scroll bg-background px-2' id='timetable-master2'>
+          <div className='flex overflow-scroll bg-background px-2'>
             <LiveDay2 />
           </div>
         </ToggleButton.Content>,
         <ToggleButton.Content key='2' className='w-full'>
-          <div className='flex overflow-scroll bg-background px-2' id='timetable-master3'>
+          <div className='flex overflow-scroll bg-background px-2'>
             <LiveDay3 />
           </div>
         </ToggleButton.Content>,
@@ -52,9 +53,21 @@ const StoreTable = () => {
     <ToggleButton
       headers={[<div key='0'>DAY1</div>, <div key='1'>DAY2</div>, <div key='2'>DAY3</div>]}
       contents={[
-        <ToggleButton.Content key='0' className='w-full'></ToggleButton.Content>,
-        <ToggleButton.Content key='1' className='w-full'></ToggleButton.Content>,
-        <ToggleButton.Content key='2' className='w-full'></ToggleButton.Content>,
+        <ToggleButton.Content key='0' className='w-full'>
+          <div className='flex overflow-scroll bg-background px-2'>
+            <GreetingDay1 />
+          </div>
+        </ToggleButton.Content>,
+        <ToggleButton.Content key='1' className='w-full'>
+          <div className='flex overflow-scroll bg-background px-2'>
+            <GreetingDay2 />
+          </div>
+        </ToggleButton.Content>,
+        <ToggleButton.Content key='2' className='w-full'>
+          <div className='flex overflow-scroll bg-background px-2'>
+            <GreetingDay3 />
+          </div>
+        </ToggleButton.Content>,
       ]}
     />
   )
