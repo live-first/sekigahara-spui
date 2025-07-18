@@ -14,6 +14,9 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { nowPresenter } from './nowPresenter'
+import { Grid } from '@mui/material'
+import { GrRestroomMen } from 'react-icons/gr'
+import { GrRestroomWomen } from 'react-icons/gr'
 
 export const SekigaharaNow = () => {
   const { now } = nowPresenter()
@@ -64,7 +67,7 @@ export const SekigaharaNow = () => {
       title='関ケ原NOW'
       backBtn={<FaChevronLeft className='w-full h-full' />}
     >
-      <div className='flex flex-col px-4 my-8 gap-6'>
+      <div className='flex flex-col px-4 py-8 gap-6'>
         {/* <Banner /> */}
         <div className='flex flex-col gap-4'>
           <div className='text-end'>{now?.datetime}</div>
@@ -130,19 +133,81 @@ export const SekigaharaNow = () => {
         <div className='flex flex-col gap-2'>
           <Heading tag={5} label='お手洗い' />
           <Panel size='lg'>
-            <ListBox>
-              <ListBox.Row>♪ 製作中 ♪</ListBox.Row>
-            </ListBox>
+            <div className='flex flex-col gap-4'>
+              <div className='flex flex-col'>
+                <Heading tag={6} label='グラウンド特設トイレ' />
+                <Grid container spacing={2}>
+                  <Grid size={6}>
+                    <div className='flex flex-col gap-1 bg-blue-400 items-center'>
+                      <GrRestroomMen />
+                      <div className='text-center'>
+                        {now?.wc.filter((wc) => wc.name === 'グラウンド')[0]?.men}
+                      </div>
+                    </div>
+                  </Grid>
+                  <Grid size={6}>
+                    <div className='flex flex-col gap-1 bg-pink-400 items-center'>
+                      <GrRestroomWomen />
+                      <div className='text-center'>
+                        {now?.wc.filter((wc) => wc.name === 'グラウンド')[0]?.lady}
+                      </div>
+                    </div>
+                  </Grid>
+                </Grid>
+              </div>
+              <div className='flex flex-col'>
+                <Heading tag={6} label='Premiumエントランス常設トイレ' />
+                <Grid container spacing={2}>
+                  <Grid size={6}>
+                    <div className='flex flex-col gap-1 bg-blue-400 items-center'>
+                      <GrRestroomMen />
+                      <div className='text-center'>
+                        {now?.wc.filter((wc) => wc.name === '常設')[0]?.men}
+                      </div>
+                    </div>
+                  </Grid>
+                  <Grid size={6}>
+                    <div className='flex flex-col gap-1 bg-pink-400 items-center'>
+                      <GrRestroomWomen />
+                      <div className='text-center'>
+                        {now?.wc.filter((wc) => wc.name === '常設')[0]?.lady}
+                      </div>
+                    </div>
+                  </Grid>
+                </Grid>
+              </div>
+              <div className='flex flex-col'>
+                <Heading tag={6} label='戦国ステージ後方常設トイレ' />
+                <Grid container spacing={2}>
+                  <Grid size={6}>
+                    <div className='flex flex-col gap-1 bg-blue-400 items-center'>
+                      <GrRestroomMen />
+                      <div className='text-center'>
+                        {now?.wc.filter((wc) => wc.name === '戦国ステージ後')[0]?.men}
+                      </div>
+                    </div>
+                  </Grid>
+                  <Grid size={6}>
+                    <div className='flex flex-col gap-1 bg-pink-400 items-center'>
+                      <GrRestroomWomen />
+                      <div className='text-center'>
+                        {now?.wc.filter((wc) => wc.name === '戦国ステージ後')[0]?.lady}
+                      </div>
+                    </div>
+                  </Grid>
+                </Grid>
+              </div>
+            </div>
           </Panel>
         </div>
-        <div className='flex flex-col gap-2'>
+        {/* <div className='flex flex-col gap-2'>
           <Heading tag={5} label='駐車場' />
           <Panel size='lg'>
             <ListBox>
               <ListBox.Row>♪ 製作中 ♪</ListBox.Row>
             </ListBox>
           </Panel>
-        </div>
+        </div> */}
         <p>実際の状況と多少誤差が生じる可能性がありますが、予めご了承ください。</p>
       </div>
     </FullModal>

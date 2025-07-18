@@ -43,7 +43,7 @@ export type NowType = {
       next: string | null
     }
   }
-  wc: { name: string; men: string; lady: string }[]
+  wc: { name: 'グラウンド' | '常設' | '戦国ステージ後'; men: string; lady: string }[]
 }
 
 export type NowResponseType = Omit<NowType, 'stage'> & {
