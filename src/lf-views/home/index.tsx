@@ -5,10 +5,10 @@ import { Panel } from '@/lf-components/Panel'
 import { SquareLink } from '@/lf-components/SquareLink'
 import { IoTicket } from 'react-icons/io5'
 import { IoBus } from 'react-icons/io5'
-import { FaTshirt } from 'react-icons/fa'
+// import { FaTshirt } from 'react-icons/fa'
 import { FaMap } from 'react-icons/fa'
 import { IoMdPin } from 'react-icons/io'
-import { PiSunglassesFill } from 'react-icons/pi'
+// import { PiSunglassesFill } from 'react-icons/pi'
 import { BiSolidMoviePlay } from 'react-icons/bi'
 import { Heading } from '@/lf-components/Heading'
 import { LinkLabel } from '@/lf-components/LinkLabel'
@@ -46,48 +46,46 @@ export const HomeView = () => {
         <Panel size='sm'>
           <div className='flex flex-col content-center p-2'>
             <Grid container spacing={1}>
-              <Grid size={3}>
+              <Grid size={4}>
                 <SquareLink
                   href='https://sekigahara-idolwars.net/ticket'
                   icon={<IoTicket className='w-full h-full' />}
                   label='チケット'
                 />
               </Grid>
-              <Grid size={3}>
+              <Grid size={4}>
                 <div className='flex flex-col justify-self-center'>
                   <BusInfo />
                 </div>
               </Grid>
-              <Grid size={3}>
+              {/* <Grid size={3}>
                 <SquareLink href='/' icon={<FaTshirt className='w-full h-full' />} label='グッズ' />
-              </Grid>
-              <Grid size={3}>
+              </Grid> */}
+              <Grid size={4}>
                 <div className='flex flex-col justify-self-center'>
                   <AreaMap />
                 </div>
               </Grid>
-              <Grid size={3}>
+              <Grid size={4}>
                 <SquareLink
                   href='https://sekigahara-idolwars.net/access'
                   icon={<IoMdPin className='w-full h-full' />}
                   label='アクセス'
                 />
               </Grid>
-              <Grid size={3}>
-                <SquareLink
-                  href='/'
-                  icon={<BiSolidMoviePlay className='w-full h-full' />}
-                  label='配信'
-                />
+              <Grid size={4}>
+                <div className='flex flex-col justify-self-center'>
+                  <Streaming />
+                </div>
               </Grid>
-              <Grid size={3}>
+              {/* <Grid size={3}>
                 <SquareLink
                   href='/'
                   icon={<PiSunglassesFill className='w-full h-full' />}
                   label='熱中症対策'
                 />
-              </Grid>
-              <Grid size={3}>
+              </Grid> */}
+              <Grid size={4}>
                 <div className='flex flex-col justify-self-center'>
                   <TodoList />
                 </div>
@@ -279,6 +277,45 @@ const BusInfo = () => {
             src='https://sekigahara-idolwars.net/images/2025/bus/bus_info.JPG'
             alt='bus_info'
           />
+        </div>
+      </div>
+    </Modal>
+  )
+}
+
+const Streaming = () => {
+  return (
+    <Modal
+      button={<SquareLink icon={<BiSolidMoviePlay className='w-full h-full' />} label='配信' />}
+      hideCloseBottomBtn
+    >
+      <div className='text-center overflow-auto'>
+        <div className='flex flex-col gap-2 w-full'>
+          <Image
+            src='https://pbs.twimg.com/media/GvZmLIlWQAA2xbB?format=jpg&name=4096x4096'
+            alt='配信'
+          />
+          <div className='flex flex-col gap-1'>
+            <Heading tag={4} label='放送スケジュール' />
+            <div className='flex flex-col gap-2 pl-3 items-start'>
+              <Heading tag={5} label='DAY1' />
+              <div className='pl-4'>
+                <Link href='https://t.co/96KzsM1R8b'>https://t.co/96KzsM1R8b</Link>
+              </div>
+            </div>
+            <div className='flex flex-col gap-2 pl-3 items-start'>
+              <Heading tag={5} label='DAY2' />
+              <div className='pl-4'>
+                <Link href='https://t.co/cxgXQf8Gtu'>https://t.co/cxgXQf8Gtu</Link>
+              </div>
+            </div>
+            <div className='flex flex-col gap-2 pl-3 items-start'>
+              <Heading tag={5} label='DAY3' />
+              <div className='pl-4'>
+                <Link href='https://t.co/tfGzrTdAjG'>https://t.co/tfGzrTdAjG</Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </Modal>
