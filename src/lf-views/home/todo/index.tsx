@@ -11,7 +11,13 @@ import { LuListTodo } from 'react-icons/lu'
 export const TodoList = () => {
   return (
     <FullModal
-      button={<SquareLink href='/' icon={<LuListTodo className='w-full h-full' />} label='準備' />}
+      button={
+        <SquareLink
+          href='/'
+          icon={<LuListTodo className='w-full h-full' />}
+          label='準備'
+        />
+      }
       title='持ち物リスト'
       backBtn={<FaChevronLeft className='w-full h-full' />}
     >
