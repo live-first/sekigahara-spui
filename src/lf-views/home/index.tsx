@@ -11,20 +11,20 @@ import { IoMdPin } from 'react-icons/io'
 // import { PiSunglassesFill } from 'react-icons/pi'
 import { BiSolidMoviePlay } from 'react-icons/bi'
 import { Heading } from '@/lf-components/Heading'
-import { LinkLabel } from '@/lf-components/LinkLabel'
+// import { LinkLabel } from '@/lf-components/LinkLabel'
 import ListBox from '@/lf-components/ListBox'
 import { SekigaharaNow } from './now'
 import { ReactNode } from 'react'
 import { sponsors } from '@/resouces/sponsor'
 import Link from 'next/link'
 import Grid from '@mui/material/Grid'
-import { GetNews } from '@/api/newsApi'
+// import { GetNews } from '@/api/newsApi'
 import { TodoList } from './todo'
 import { Modal } from '@/lf-components/Modal'
 
 export const HomeView = () => {
-  const { news } = GetNews()
-  const newsList = news ?? []
+  // const { news } = GetNews()
+  // const newsList = news ?? []
 
   return (
     <div className='flex flex-col'>
@@ -96,7 +96,7 @@ export const HomeView = () => {
         <div className='mt-4'>
           <SekigaharaNow />
         </div>
-        <Section>
+        {/* <Section>
           <Heading
             tag={4}
             label='お知らせ'
@@ -114,7 +114,7 @@ export const HomeView = () => {
                 ))}
             </ListBox>
           </Panel>
-        </Section>
+        </Section> */}
         <Section>
           <Heading tag={4} label='開催概要' />
           <Panel>

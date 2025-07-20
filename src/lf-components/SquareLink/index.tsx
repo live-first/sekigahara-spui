@@ -18,7 +18,7 @@ export const SquareLink = (props: SquareLinkProps) => {
       prefetch={true}
       className={cn(
         `square-link-${size}`,
-        'flex flex-col items-center justify-between justify-self-center',
+        'flex flex-col items-center justify-between justify-self-center place-items-center',
       )}
     >
       <div className='h-2/3 w-full'>{icon}</div>

@@ -3,7 +3,8 @@ import Link from 'next/link'
 import { FaHouse } from 'react-icons/fa6'
 import { GiMicrophone } from 'react-icons/gi'
 import { FaClock } from 'react-icons/fa6'
-import { FaMap } from 'react-icons/fa'
+// import { FaMap } from 'react-icons/fa'
+import { FaPhotoFilm } from 'react-icons/fa6'
 import { ReactNode } from 'react'
 
 export const GlobalFooter = () => {
@@ -24,7 +25,13 @@ export const GlobalFooter = () => {
           title='タイムテーブル'
         />
       }
-      other={<FooterCell href='/' icon={<FaMap className='h-full w-full' />} title='マップ' />}
+      other={
+        <FooterCell
+          href='/'
+          icon={<FaPhotoFilm className='h-full w-full' />}
+          title='ライブフォト'
+        />
+      }
     />
   )
 }
@@ -37,7 +44,11 @@ type FooterProps = {
 const FooterCell = (props: FooterProps) => {
   const { href, icon, title } = props
   return (
-    <Link href={href} prefetch={true} className='flex flex-col w-full h-full pt-2 pb-6 justify-between items-center'>
+    <Link
+      href={href}
+      prefetch={true}
+      className='flex flex-col w-full h-full pt-2 pb-6 justify-between items-center'
+    >
       <div className='h-2/3 w-full'>{icon}</div>
       <div className='text-xs whitespace-nowrap'>{title}</div>
     </Link>
