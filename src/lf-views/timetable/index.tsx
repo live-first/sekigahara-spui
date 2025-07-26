@@ -4,6 +4,7 @@ import Tab from '@/lf-components/Tab'
 import ToggleButton from '@/lf-components/ToggleButton'
 import { LiveDay1, LiveDay2, LiveDay3 } from './live'
 import { GreetingDay1, GreetingDay2, GreetingDay3 } from './greeting'
+import { useStore } from '@/store/useStore'
 
 export const TimeTableView = () => {
   return (
@@ -24,8 +25,10 @@ export const TimeTableView = () => {
 }
 
 const LiveTable = () => {
+  const store = useStore('live-tab')
   return (
     <ToggleButton
+      current={Number(store.getItem('live-tab')) ?? 0}
       headers={[<div key='0'>DAY1</div>, <div key='1'>DAY2</div>, <div key='2'>DAY3</div>]}
       contents={[
         <ToggleButton.Content key='0' className='w-full'>
@@ -44,13 +47,18 @@ const LiveTable = () => {
           </div>
         </ToggleButton.Content>,
       ]}
+      onClick={(state) => {
+        store.setItem(state)
+      }}
     />
   )
 }
 
 const StoreTable = () => {
+  const store = useStore('store-tab')
   return (
     <ToggleButton
+      current={Number(store.getItem('store-tab')) ?? '0'}
       headers={[<div key='0'>DAY1</div>, <div key='1'>DAY2</div>, <div key='2'>DAY3</div>]}
       contents={[
         <ToggleButton.Content key='0' className='w-full'>
@@ -69,6 +77,9 @@ const StoreTable = () => {
           </div>
         </ToggleButton.Content>,
       ]}
+      onClick={(state) => {
+        store.setItem(state)
+      }}
     />
   )
 }

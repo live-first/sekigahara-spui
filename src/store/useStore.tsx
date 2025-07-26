@@ -1,6 +1,9 @@
-export const useStore = ({ key }: { key: string }) => {
-  const setItem = ({ obj: _obj }: { obj: object }) => {
-    const obj = JSON.stringify(_obj)
+export const useStore = (key: string) => {
+  const getItem = (key: string) => {
+    return localStorage.getItem(key)
+  }
+  const setItem = (item: object | string | number) => {
+    const obj = JSON.stringify(item)
     localStorage.setItem(key, obj)
   }
 
@@ -13,8 +16,9 @@ export const useStore = ({ key }: { key: string }) => {
   }
 
   return {
+    getItem,
     setItem,
     removeItem,
-    clearItem
+    clearItem,
   }
 }

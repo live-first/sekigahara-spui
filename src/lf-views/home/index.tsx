@@ -30,7 +30,7 @@ export const HomeView = () => {
     <div className='flex flex-col'>
       <div className='relative mb-14'>
         <Image
-          src='https://sekigahara-idolwars.net/images/2025/news/about5.jpg'
+          src='https://sekigahara-idolwars.net/images/2025/sekigahara_thanks_top.png'
           alt=''
           cName='w-full'
         />
@@ -166,9 +166,17 @@ export const HomeView = () => {
             </Grid>
           </Panel>
         </Section>
-        {/* <Section>
-          <Image src='https://sekigahara-idolwars.net/images/2025/sponsor/pic1.png' alt='' />
-        </Section> */}
+        <Section>
+          <Link
+            href='https://www.withlive.jp/kuji.php?id=7589'
+            className='flex flex-col justify-center h-full'
+          >
+            <Image
+              src='https://pbs.twimg.com/media/GwRSLw9XgAAmZFq?format=jpg&name=medium'
+              alt=''
+            />
+          </Link>
+        </Section>
         <Section>
           <Heading tag={4} label='注意事項' />
           <Panel>

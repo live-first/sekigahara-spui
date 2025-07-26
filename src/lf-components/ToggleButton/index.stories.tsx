@@ -21,6 +21,7 @@ const Temp = () => {
             className='w-full bg-blue-200 h-[300px]'
           ></ToggleButton.Content>,
         ]}
+        onClick={() => {}}
       />
     </div>
   )
