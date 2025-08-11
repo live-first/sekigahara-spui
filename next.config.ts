@@ -15,6 +15,7 @@ const nextConfig = withPWA({
   },
   reactStrinctMode: true,
   output: 'export',
+  trailingSlash: true,
   // hot reload
   webpack: (config, { dev }) => {
     if (dev) {

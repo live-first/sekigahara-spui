@@ -1,18 +1,26 @@
 export const useStore = (key: string) => {
   const getItem = (key: string) => {
-    return localStorage.getItem(key)
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem(key)
+    }
   }
   const setItem = (item: object | string | number) => {
-    const obj = JSON.stringify(item)
-    localStorage.setItem(key, obj)
+    if (typeof window !== 'undefined') {
+      const obj = JSON.stringify(item)
+      localStorage.setItem(key, obj)
+    }
   }
 
   const removeItem = () => {
-    localStorage.removeItem(key)
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem(key)
+    }
   }
 
   const clearItem = () => {
-    localStorage.clear()
+    if (typeof window !== 'undefined') {
+      localStorage.clear()
+    }
   }
 
   return {
