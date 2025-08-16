@@ -11,10 +11,11 @@ export type ModalProps = {
   isOpen?: boolean
   title: string
   backBtn?: ReactNode
+  cName?: string
 }
 
 export const FullModal = (props: PropsWithChildren<ModalProps>) => {
-  const { button, isOpen = false, title, backBtn, children } = props
+  const { button, isOpen = false, title, backBtn, children, cName } = props
   const [open, setOpen] = useState<boolean>(isOpen)
 
   useEffect(() => {
@@ -44,8 +45,8 @@ export const FullModal = (props: PropsWithChildren<ModalProps>) => {
   }
 
   return (
-    <div className='flex flex-col w-full h-full'>
-      <button className='flex flex-col w-full h-full justify-center' onClick={() => setOpen(true)}>
+    <>
+      <button className={cn(cName)} onClick={() => setOpen(true)}>
         {button}
       </button>
       <div className={cn(open ? 'fixed top-0 left-0 z-20 modal-body' : 'slide-out')}>
@@ -59,6 +60,6 @@ export const FullModal = (props: PropsWithChildren<ModalProps>) => {
           topless
         />
       </div>
-    </div>
+    </>
   )
 }

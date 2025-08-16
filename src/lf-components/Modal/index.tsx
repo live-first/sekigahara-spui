@@ -15,8 +15,8 @@ export const Modal = (props: PropsWithChildren<ModalProps>) => {
   const [open, setOpen] = useState<boolean>(isOpen)
 
   return (
-    <div className='flex flex-col w-full'>
-      <button className='flex flex-col w-full' onClick={() => setOpen(true)}>
+    <>
+      <button onClick={() => setOpen(true)}>
         {button}
       </button>
       <div className={cn(open ? 'w-full h-full overlay fixed top-0 left-0 z-[200]' : 'hidden')}>
@@ -43,6 +43,6 @@ export const Modal = (props: PropsWithChildren<ModalProps>) => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }

@@ -21,6 +21,7 @@ export const Setting = () => {
       button={<IoSettingsSharp className='w-full h-full' />}
       title='設定'
       backBtn={<FaChevronLeft className='w-full h-full' />}
+      cName='w-full'
     >
       <div className='flex flex-col px-4 mt-8 gap-6'>
         <div className='flex flex-col gap-0.5'>
