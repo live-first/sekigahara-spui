@@ -1,14 +1,11 @@
 'use client'
 
 import { ArtistType } from '@/domain/artist'
-import Grid from '@mui/material/Grid'
 import { DotLottieReact } from '@lottiefiles/dotlottie-react'
-import { Modal } from '@/lf-components/Modal'
-import { ArtistBox } from '@/lf-templates/artistBox'
-import { ArtistModal } from '@/lf-templates/artistModal/artistModal'
 import { lineup } from '@/resouces/lineup'
 import { TextField } from '@/lf-components/TextField'
 import { useState } from 'react'
+import { ArtistBoxModal } from '@/lf-templates/modal/ArtistBoxMolal'
 
 export const LineupView = () => {
   const viewLineup = lineup.map((unit: ArtistType) => {
@@ -61,14 +58,10 @@ export const LineupView = () => {
         placeholder='アーティスト名で検索'
         onChange={(e) => textOnChange(e.target.value)}
       />
-      <Grid container spacing={2}>
+      <div className='grid grid-cols-2 gap-2'>
         {units ? (
           units.map((unit, index) => {
-            return (
-              <Grid size={6} key={index}>
-                <ArtistBox {...unit} />
-              </Grid>
-            )
+            return <ArtistBoxModal {...unit} key={index} />
           })
         ) : (
           <DotLottieReact
@@ -77,15 +70,7 @@ export const LineupView = () => {
             autoplay
           />
         )}
-      </Grid>
+      </div>
     </div>
-  )
-}
-
-export const ArtistBoxModal = (props: ArtistType) => {
-  return (
-    <Modal button={<ArtistBox {...props} />}>
-      <ArtistModal {...props} />
-    </Modal>
   )
 }

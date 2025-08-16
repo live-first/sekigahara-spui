@@ -46,7 +46,7 @@ export const FullModal = (props: PropsWithChildren<ModalProps>) => {
 
   return (
     <>
-      <button className={cn(cName)} onClick={() => setOpen(true)}>
+      <button className={cName} onClick={() => setOpen(true)}>
         {button}
       </button>
       <div className={cn(open ? 'fixed top-0 left-0 z-20 modal-body' : 'slide-out')}>

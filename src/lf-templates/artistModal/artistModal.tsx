@@ -6,11 +6,13 @@ import { ArtistType } from '@/domain/artist'
 export const ArtistModal = (props: ArtistType) => {
   const { img, name, x } = props
   return (
-    <div className='artist-modal'>
-      <div className='img-area'>
+    <div>
+      <div>
         <Image src={img.toString()} alt={name} />
       </div>
-      <div className='artist-name'>{name}</div>
+      <div className='text-krf-blue text-md md:text-xl font-bold text-center h-14'>
+        <p className='whitespace-pre-wrap h-full content-center leading-5'>{name}</p>
+      </div>
       <div className='concept'>{/* {artistData.concept} */}</div>
       <div className='flex gap-4 justify-center'>
         {x !== '' && (

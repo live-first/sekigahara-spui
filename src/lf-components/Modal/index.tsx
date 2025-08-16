@@ -8,15 +8,23 @@ export type ModalProps = {
   isOpen?: boolean
   hideCloseBottomBtn?: boolean
   overlay?: boolean // 背景で閉じる
+  cName?: string
 }
 
 export const Modal = (props: PropsWithChildren<ModalProps>) => {
-  const { button, isOpen = false, hideCloseBottomBtn = false, overlay = true, children } = props
+  const {
+    button,
+    isOpen = false,
+    hideCloseBottomBtn = false,
+    overlay = true,
+    children,
+    cName,
+  } = props
   const [open, setOpen] = useState<boolean>(isOpen)
 
   return (
     <>
-      <button onClick={() => setOpen(true)}>
+      <button className={cName} onClick={() => setOpen(true)}>
         {button}
       </button>
       <div className={cn(open ? 'w-full h-full overlay fixed top-0 left-0 z-[200]' : 'hidden')}>
