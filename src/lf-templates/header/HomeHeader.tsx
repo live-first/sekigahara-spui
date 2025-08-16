@@ -2,17 +2,20 @@
 
 import { Header } from '@/lf-components/Header'
 import { Image } from '@/lf-components/Image'
-import { BsBellFill } from 'react-icons/bs'
-import { FullModal } from '@/lf-components/FullModal'
-import { FaChevronLeft } from 'react-icons/fa6'
-import { Setting } from '@/lf-views/home/setting/inde'
 import { useTheme } from 'next-themes'
+import { ReactNode } from 'react'
 
-export const HomeHeader = () => {
+type HomeHeaderProps = {
+  left?: ReactNode
+  right?: ReactNode
+}
+
+export const HomeHeader = (props: HomeHeaderProps) => {
+  const { left, right } = props
   const { theme } = useTheme()
   return (
     <Header
-      left={<Notification />}
+      left={left}
       center={
         theme === 'dark' ? (
           <Image
@@ -28,19 +31,7 @@ export const HomeHeader = () => {
           />
         )
       }
-      right={<Setting />}
+      right={right}
     />
-  )
-}
-
-const Notification = () => {
-  return (
-    <FullModal
-      button={<BsBellFill className='w-full h-full' />}
-      title='通知'
-      backBtn={<FaChevronLeft className='w-full h-full' />}
-    >
-      <div className='w-full h-full'></div>
-    </FullModal>
   )
 }

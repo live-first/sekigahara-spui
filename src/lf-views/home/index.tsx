@@ -34,27 +34,29 @@ export const HomeView = () => {
           alt=''
           cName='w-full'
         />
-        <div className='absolute -bottom-12 shadow-2xl left-1/2 -translate-x-1/2 w-3/4 p-2 bg-panel text-center leading-7 text-2xl font-bold rounded-3xl'>
+        {/* <div className='absolute -bottom-12 shadow-2xl left-1/2 -translate-x-1/2 w-3/4 p-2 bg-panel text-center leading-7 text-2xl font-bold rounded-3xl'>
           2025年
           <br />
           19日・20日・21日
           <br />
           @桃配運動公園
-        </div>
+        </div> */}
       </div>
       <div className='pt-6 pb-12 px-4'>
         <Panel size='sm'>
           <div className='flex flex-col content-center p-2'>
             <Grid container spacing={1}>
               <Grid size={4}>
-                <SquareLink
-                  href='https://sekigahara-idolwars.net/ticket'
-                  icon={<IoTicket className='w-full h-full' />}
-                  label='チケット'
-                />
+                <div className='flex w-full justify-center'>
+                  <SquareLink
+                    href='https://sekigahara-idolwars.net/ticket'
+                    icon={<IoTicket className='w-full h-full' />}
+                    label='チケット'
+                  />
+                </div>
               </Grid>
               <Grid size={4}>
-                <div className='flex flex-col justify-self-center'>
+                <div className='flex w-full justify-center'>
                   <BusInfo />
                 </div>
               </Grid>
@@ -62,19 +64,21 @@ export const HomeView = () => {
                 <SquareLink href='/' icon={<FaTshirt className='w-full h-full' />} label='グッズ' />
               </Grid> */}
               <Grid size={4}>
-                <div className='flex flex-col justify-self-center'>
+                <div className='flex w-full justify-center'>
                   <AreaMap />
                 </div>
               </Grid>
               <Grid size={4}>
-                <SquareLink
-                  href='https://sekigahara-idolwars.net/access'
-                  icon={<IoMdPin className='w-full h-full' />}
-                  label='アクセス'
-                />
+                <div className='flex w-full justify-center'>
+                  <SquareLink
+                    href='https://sekigahara-idolwars.net/access'
+                    icon={<IoMdPin className='w-full h-full' />}
+                    label='アクセス'
+                  />
+                </div>
               </Grid>
               <Grid size={4}>
-                <div className='flex flex-col justify-self-center'>
+                <div className='flex w-full justify-center'>
                   <Streaming />
                 </div>
               </Grid>
@@ -86,7 +90,7 @@ export const HomeView = () => {
                 />
               </Grid> */}
               <Grid size={4}>
-                <div className='flex flex-col justify-self-center'>
+                <div className='flex w-full justify-center'>
                   <TodoList />
                 </div>
               </Grid>

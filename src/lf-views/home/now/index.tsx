@@ -66,6 +66,7 @@ export const SekigaharaNow = () => {
       button={<ButtonBanner />}
       title='関ケ原NOW'
       backBtn={<FaChevronLeft className='w-full h-full' />}
+      cName='w-full'
     >
       <div className='flex flex-col px-4 py-8 gap-6'>
         {/* <Banner /> */}
