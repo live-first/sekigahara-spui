@@ -28,7 +28,7 @@ export const HomeView = () => {
 
   return (
     <div className='flex flex-col'>
-      <div className='relative mb-14'>
+      <div className='relative'>
         <Image
           src='https://sekigahara-idolwars.net/images/2025/sekigahara_thanks_top.png'
           alt=''
@@ -42,7 +42,7 @@ export const HomeView = () => {
           @桃配運動公園
         </div> */}
       </div>
-      <div className='pt-6 pb-12 px-4'>
+      <div className='pt-4 pb-12 px-4'>
         <Panel size='sm'>
           <div className='flex flex-col content-center p-2'>
             <Grid container spacing={1}>
